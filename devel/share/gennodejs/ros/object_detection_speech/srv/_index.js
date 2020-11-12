@@ -1,0 +1,1 @@
+/home/mivia/cog2020_group11/devel/.private/object_detection_speech/share/gennodejs/ros/object_detection_speech/srv/_index.js

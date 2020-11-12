@@ -1,0 +1,6 @@
+devel_space: /home/mivia/cog2020_group11/devel
+install: false
+install_space: /home/mivia/cog2020_group11/install
+profile: default
+source_space: /home/mivia/cog2020_group11/src
+workspace: /home/mivia/cog2020_group11

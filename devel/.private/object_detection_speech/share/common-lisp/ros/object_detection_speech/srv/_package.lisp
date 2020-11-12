@@ -1,0 +1,20 @@
+(cl:defpackage object_detection_speech-srv
+  (:use )
+  (:export
+   "CAPTURE"
+   "<CAPTURE-REQUEST>"
+   "CAPTURE-REQUEST"
+   "<CAPTURE-RESPONSE>"
+   "CAPTURE-RESPONSE"
+   "SAY"
+   "<SAY-REQUEST>"
+   "SAY-REQUEST"
+   "<SAY-RESPONSE>"
+   "SAY-RESPONSE"
+   "CAPTURE_ENDED"
+   "<CAPTURE_ENDED-REQUEST>"
+   "CAPTURE_ENDED-REQUEST"
+   "<CAPTURE_ENDED-RESPONSE>"
+   "CAPTURE_ENDED-RESPONSE"
+  ))
+
