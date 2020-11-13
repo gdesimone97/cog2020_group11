@@ -1,0 +1,4 @@
+naoqi_bridge/naoqi_navigation/python
+/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/lib/pkgconfig/naoqi_navigation.pc /home/mivia/cog2020_group11/devel/lib/pkgconfig/naoqi_navigation.pc
+/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/share/naoqi_navigation/cmake/naoqi_navigationConfig.cmake /home/mivia/cog2020_group11/devel/share/naoqi_navigation/cmake/naoqi_navigationConfig.cmake
+/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/share/naoqi_navigation/cmake/naoqi_navigationConfig-version.cmake /home/mivia/cog2020_group11/devel/share/naoqi_navigation/cmake/naoqi_navigationConfig-version.cmake

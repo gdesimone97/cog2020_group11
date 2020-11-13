@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+80ce41cd9a73076bd6cff745054cf7bc /home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/include/naoqi_sensors_py/NaoqiCameraConfig.h
+d08817127c3beeb91421ba3ddedcf353 /home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/include/naoqi_sensors_py/NaoqiMicrophoneConfig.h
+7a55cd0fe5c2c036e0da3a134262fb1a CMakeFiles/clean_test_results
+94e4a5b246a04fcf7d1ab37a7a7c65b8 CMakeFiles/naoqi_sensors_py_gencfg
