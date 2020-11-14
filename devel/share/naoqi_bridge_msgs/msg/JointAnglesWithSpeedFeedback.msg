@@ -1,1 +1,0 @@
-/home/mivia/cog2020_group11/devel/.private/naoqi_bridge_msgs/share/naoqi_bridge_msgs/msg/JointAnglesWithSpeedFeedback.msg

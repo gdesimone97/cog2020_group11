@@ -1,8 +1,0 @@
-prefix=/home/mivia/cog2020_group11/install
-
-Name: naoqi_pose
-Description: Description of naoqi_pose
-Version: 0.5.5
-Cflags: 
-Libs: -L/home/mivia/cog2020_group11/install/lib 
-Requires: 

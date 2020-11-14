@@ -1,8 +1,0 @@
-prefix=/home/mivia/cog2020_group11/devel/.private/naoqi_navigation
-
-Name: naoqi_navigation
-Description: Description of naoqi_navigation
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/lib 
-Requires: 

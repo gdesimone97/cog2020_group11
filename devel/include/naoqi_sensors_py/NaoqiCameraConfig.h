@@ -1,1 +1,0 @@
-/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/include/naoqi_sensors_py/NaoqiCameraConfig.h

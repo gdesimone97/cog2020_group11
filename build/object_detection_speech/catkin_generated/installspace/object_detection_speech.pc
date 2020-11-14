@@ -1,8 +1,0 @@
-prefix=/home/mivia/cog2020_group11/install
-
-Name: object_detection_speech
-Description: Description of object_detection_speech
-Version: 0.0.0
-Cflags: -I/home/mivia/cog2020_group11/install/include
-Libs: -L/home/mivia/cog2020_group11/install/lib 
-Requires: message_runtime rospy std_msgs

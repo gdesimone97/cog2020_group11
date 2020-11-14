@@ -1,1 +1,0 @@
-/home/mivia/cog2020_group11/devel/.private/naoqi_tools/lib/python2.7/dist-packages/naoqi_tools/__init__.py

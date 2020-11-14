@@ -1,8 +1,0 @@
-prefix=/home/mivia/cog2020_group11/install
-
-Name: naoqi_bridge_msgs
-Description: Description of naoqi_bridge_msgs
-Version: 0.0.8
-Cflags: -I/home/mivia/cog2020_group11/install/include
-Libs: -L/home/mivia/cog2020_group11/install/lib 
-Requires: genmsg message_runtime actionlib_msgs sensor_msgs nav_msgs trajectory_msgs std_msgs geometry_msgs
