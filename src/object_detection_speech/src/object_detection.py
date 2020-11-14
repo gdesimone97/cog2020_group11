@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-import cv2
+import rospy
 import tensorflow as tf
 assert(int(tf.__version__.split('.')[0]) >= 2)
 import ros_numpy
@@ -8,8 +8,9 @@ from classmap import category_map as classmap
 from sensor_msgs.msg import Image
 from object_detection_speech.srv import capture_ended, capture_endedResponse, Say
 import json
+import os
 
-def callback(data: Image):
+def callback(data):
 
     # convert Image into numpy array
     img = ros_numpy.numpify(data)
@@ -62,7 +63,8 @@ if __name__ == '__main__':
     TOPIC_SUB = "frame_read"
     TOPIC_PUB = "obj_detected"
     dict_obj = {}
-    rospy.loginfo('Loading model...', end='')
-    detect_fn = tf.saved_model.load('../efficientdet_d1_coco17_tpu-32')
-    rospy.loginfo('Done!')
+    print('Loading model...', end='')
+    DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
+    detect_fn = tf.saved_model.load(DET_PATH)
+    print('Done!')
     detector()

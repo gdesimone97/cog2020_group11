@@ -1,16 +1,15 @@
-#!/usr/bin/python3
+#!/usr/bin/python2.7
 import rospy
 from naoqi_driver.naoqi_node import NaoqiNode
 from object_detection_speech.srv import Say, SayResponse
 import json
 
-
 class AnimatedSay(NaoqiNode):
     TOPIC_SUB = "obj_detected"
 
-    def talker(self):
-        rospy.init_node('talker')
+    def __init__(self):
         NaoqiNode.__init__(self, 'animated_speech')
+        self.connectNaoQi()
         pass
 
     def say(self, data):
@@ -18,7 +17,7 @@ class AnimatedSay(NaoqiNode):
         self.speech.say("In totale ho rilevato questi oggetti:")
         
         # Converting Json
-        dictionary:dict = json.loads(data.message)
+        dictionary = json.loads(data.message)
 
         for k,v in dictionary.items():
             stringa = k + ", " + v + ". "
@@ -34,5 +33,6 @@ class AnimatedSay(NaoqiNode):
 
 
 if __name__ == '__main__':
+    rospy.init_node('speaker')
     pub = AnimatedSay()
     rospy.spin()
