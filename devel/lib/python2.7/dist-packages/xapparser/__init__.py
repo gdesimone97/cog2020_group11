@@ -1,0 +1,1 @@
+/home/mivia/cog2020_group11/devel/.private/naoqi_pose/lib/python2.7/dist-packages/xapparser/__init__.py

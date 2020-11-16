@@ -2,7 +2,7 @@
 import rospy
 from naoqi_bridge_msgs.msg import JointAnglesWithSpeed
 from object_detection_speech.srv import Capture, CaptureResponse, capture_ended
-
+import time
 
 def end_capture():
     try:
@@ -30,13 +30,17 @@ rospy.wait_for_service('Capture')
 print("Sto aspettando capture_ended")
 rospy.wait_for_service('capture_ended')
 p = rospy.Publisher('/pepper_robot/pose/joint_angles', JointAnglesWithSpeed, queue_size=0)
-#s = JointAnglesWithSpeed()
-#s.joint_names=['HeadPitch', 'HeadYaw']
-#s.relative=0
-#s.speed=0.2
+s = JointAnglesWithSpeed()
+s.joint_names=['HeadPitch', 'HeadYaw']
+s.relative=0
+s.speed=0.2
 rate = rospy.Rate(0.2)
+s.joint_angles=[0.2, 0]
+rospy.loginfo(s.joint_angles) #va al centro
+p.publish(s)
+rate.sleep()
 while not rospy.is_shutdown():
-    command = input("Press f to start")
+    command = raw_input("Press f to start")
     if(command == 'f'):
         s.joint_angles=[0.2, 1.0 ]  #va a sinistrra
         rospy.loginfo(s.joint_angles)

@@ -35,10 +35,10 @@ def callback(data):
             dict_obj[classmap[c]] = 1
         else:
             dict_obj[classmap[c]] = dict_obj[classmap[c]] + 1
-
+    print(dict_obj)
 
 def handleService(req):
-
+    '''
     global dict_obj
     rospy.wait_for_service('animatedSay')
     try:
@@ -48,14 +48,16 @@ def handleService(req):
         rospy.logwarn("Service call failed: %s" %e)
         dict_obj = {}
         return capture_endedResponse(False)
-
+    '''
+    global dict_obj
     dict_obj = {}
-    return capture_endedResponse(resp1.result)
+    return capture_endedResponse(True)
 
 def detector():
     rospy.init_node('object_detection')
     rospy.Service("capture_ended", capture_ended, handleService)
     rospy.Subscriber(TOPIC_SUB, Image, callback)
+    print("Tutto caricato!")
     rospy.spin()
 
 

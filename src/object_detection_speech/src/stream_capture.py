@@ -8,8 +8,8 @@ import time
 def frame_reader(data):
 
     global flag
-
     if flag:
+        print("Sono nella if")
         image = data
 
         '''
@@ -29,6 +29,7 @@ def frame_reader(data):
 def callback(req):
 
     global flag
+    print("Sono nella callback")
     flag = True
     time.sleep(0.2)
     return CaptureResponse(True)
@@ -58,6 +59,7 @@ if __name__ == "__main__":
     #frame = np.zeros((height, width, 3), np.uint8)
     r = rospy.Rate(1)
     pub = rospy.Publisher("frame_read", Image, queue_size=1)
-    #rospy.Subscriber("/pepper_robot/camera/front/camera/image_raw", Image, frame_reader)
+    rospy.Subscriber("/pepper_robot/camera/front/camera/image_raw", Image, frame_reader)
     rospy.Service("Capture", Capture, callback)
+    print("Tutto caricato")
     rospy.spin()

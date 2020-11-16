@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+6e3e7d84e4694e44504540929073a585 /home/mivia/cog2020_group11/devel/.private/naoqi_driver_py/include/naoqi_driver_py/NaoqiSpeechConfig.h
+5251233a3b399f12599e8e16fd1f6f6f CMakeFiles/clean_test_results
+df84df9cd5f5fb747f8e4f8eeb5e4af4 CMakeFiles/naoqi_driver_py_gencfg

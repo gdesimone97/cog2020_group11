@@ -1,0 +1,1 @@
+/home/mivia/cog2020_group11/devel/.private/naoqi_bridge_msgs/share/roseus/ros/naoqi_bridge_msgs/msg/MemoryPairString.l

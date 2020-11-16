@@ -1,0 +1,8 @@
+prefix=/home/mivia/cog2020_group11/install
+
+Name: naoqi_navigation
+Description: Description of naoqi_navigation
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/mivia/cog2020_group11/install/lib 
+Requires: 

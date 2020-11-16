@@ -33,6 +33,6 @@ class AnimatedSay(NaoqiNode):
 
 
 if __name__ == '__main__':
-    rospy.init_node('speaker')
+    rospy.init_node('speak')
     pub = AnimatedSay()
     rospy.spin()

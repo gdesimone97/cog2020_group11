@@ -1,0 +1,1 @@
+/home/mivia/cog2020_group11/devel/.private/naoqi_apps/share/naoqi_apps/cmake/naoqi_appsConfig-version.cmake
