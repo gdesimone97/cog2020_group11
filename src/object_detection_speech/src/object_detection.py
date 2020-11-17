@@ -19,7 +19,7 @@ class Detector():
     def __init__(self):
         rospy.init_node('object_detection')
         rospy.Service("capture_ended", capture_ended, self.handleService)
-        rospy.Subscribe(Detector.TOPIC_SUB, ImagePos, self.callback)
+        rospy.Subscriber(Detector.TOPIC_SUB, ImagePos, self.callback)
         self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
 
     def callback(self, data: ImagePos):
@@ -49,15 +49,25 @@ class Detector():
         print(pos, self.dict_obj[pos])
 
     def handleService(self, req):
-        rospy.wait_for_service('animatedSay')
+        
+        #rospy.wait_for_service('animatedSay')
         try:
             call = rospy.ServiceProxy('animatedSay', Say)
-            resp1: Say = call(json.dumps(self.dict_obj))
-            self.dict_obj = {}
+            #resp1: Say = call(json.dumps(self.dict_obj))
+            self.dict_obj[HeadMovement.CENTRO].clear()
+            self.dict_obj[HeadMovement.SINISTRA].clear()
+            self.dict_obj[HeadMovement.DESTRA].clear()
+            print(self.dict_obj)
+            #self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
             return capture_endedResponse(resp1.result)
         except rospy.ServiceException as e:
             rospy.logwarn("Service call failed: %s" %e)
-            self.dict_obj = {}
+            #self.dict_obj.clear()
+            self.dict_obj[HeadMovement.CENTRO].clear()
+            self.dict_obj[HeadMovement.SINISTRA].clear()
+            self.dict_obj[HeadMovement.DESTRA].clear()
+            #self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
+            print(self.dict_obj)
             return capture_endedResponse(False)
 
 

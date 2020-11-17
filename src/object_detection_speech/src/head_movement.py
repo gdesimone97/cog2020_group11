@@ -6,9 +6,9 @@ import sys
 
 class HeadMovement():
 
-    SINISTRA = -1
-    CENTRO = 0
-    DESTRA = 1
+    SINISTRA = 2
+    CENTRO = 1
+    DESTRA = 0
 
     def __init__(self):
 
@@ -22,10 +22,10 @@ class HeadMovement():
 
     def move_head(self, pos, capture=True):
 
-        self.s.joint_angles = [0.2, pos]
+        self.s.joint_angles = [0.2, pos-1]
         rospy.loginfo(self.s.joint_angles)
         self.p.publish(self.s)
-        self.rate.sleep(3)
+        self.rate.sleep()
 
         if not capture:
             return True

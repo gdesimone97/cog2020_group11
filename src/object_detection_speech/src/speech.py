@@ -19,11 +19,11 @@ class AnimatedSay(NaoqiNode):
         
         # Converting Json
         dictionary = json.loads(data.message)
-
+        stringa = ""
         for k,v in dictionary.items():
-            stringa = "In the " + self.pos2string(k) + " I saw: "
+            stringa = stringa + "In the " + self.pos2string(k) + " I saw: "
             for object, num in v.items():
-                stringa = stringa + "a " + object + " " + num + ("times" if num > 1 else "time") + ", "
+                stringa = stringa + "a " + object + " " + str(num) + ("times" if num > 1 else "time") + ", "
             stringa = stringa + ". "
 
         stringa = stringa + "Finished."
@@ -36,7 +36,7 @@ class AnimatedSay(NaoqiNode):
         self.s = rospy.Service('animatedSay', Say, self.say)
 
     def pos2string(self, pos):
-
+        pos = int(pos)
         if pos == HeadMovement.DESTRA:
             return "Right"
         elif pos == HeadMovement.CENTRO:
