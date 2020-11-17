@@ -8,6 +8,8 @@
 
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/mivia/cog2020_group11/devel/.private/naoqi_navigation:$CMAKE_PREFIX_PATH"
+export LD_LIBRARY_PATH="/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/mivia/cog2020_group11/build/naoqi_navigation"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/home/mivia/cog2020_group11/src/naoqi_bridge/naoqi_navigation/python:$ROS_PACKAGE_PATH"

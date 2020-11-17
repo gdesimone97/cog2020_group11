@@ -120,6 +120,10 @@ file(INSTALL DESTINATION "/home/mivia/cog2020_group11/install" TYPE FILE FILES "
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection_speech/msg" TYPE FILE FILES "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/object_detection_speech/srv" TYPE FILE FILES
     "/home/mivia/cog2020_group11/src/object_detection_speech/srv/capture_ended.srv"
     "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv"

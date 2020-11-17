@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::object_detection_speech::Capture > {
   static const char* value()
   {
-    return "e27848a10f8e7e4030443887dfea101b";
+    return "866d0f24d3ab72d13af3825e88039241";
   }
 
   static const char* value(const ::object_detection_speech::Capture&) { return value(); }

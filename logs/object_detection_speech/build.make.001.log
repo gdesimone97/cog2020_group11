@@ -1,0 +1,20 @@
+[  0%] Built target _object_detection_speech_generate_messages_check_deps_Say
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _object_detection_speech_generate_messages_check_deps_capture_ended
+[  0%] Built target _object_detection_speech_generate_messages_check_deps_Capture
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_eus
+[  5%] [34m[1mGenerating C++ code from object_detection_speech/Capture.srv[0m
+[ 17%] Built target object_detection_speech_generate_messages_cpp
+[ 23%] [34m[1mGenerating Python code from SRV object_detection_speech/Capture[0m
+[ 29%] [34m[1mGenerating Python srv __init__.py for object_detection_speech[0m
+[ 41%] Built target object_detection_speech_generate_messages_py
+[ 47%] [34m[1mGenerating Javascript code from object_detection_speech/Capture.srv[0m
+[ 58%] Built target object_detection_speech_generate_messages_nodejs
+[ 64%] [34m[1mGenerating Lisp code from object_detection_speech/Capture.srv[0m
+[ 76%] Built target object_detection_speech_generate_messages_lisp
+[ 82%] [34m[1mGenerating EusLisp code from object_detection_speech/Capture.srv[0m
+[100%] Built target object_detection_speech_generate_messages_eus
+[100%] Built target object_detection_speech_generate_messages

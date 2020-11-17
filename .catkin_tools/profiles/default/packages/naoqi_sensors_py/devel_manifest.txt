@@ -1,0 +1,20 @@
+naoqi_bridge/naoqi_sensors_py
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors_py/__init__.py /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors_py/__init__.py
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors_py/boost/octomap_python.so /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors_py/boost/octomap_python.so
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors_py/boost/__init__.py /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors_py/boost/__init__.py
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors_py/cfg/NaoqiCameraConfig.py /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors_py/cfg/NaoqiCameraConfig.py
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors_py/cfg/NaoqiMicrophoneConfig.py /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors_py/cfg/NaoqiMicrophoneConfig.py
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors_py/cfg/__init__.py /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors_py/cfg/__init__.py
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors/__init__.pyc /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors/__init__.pyc
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/python2.7/dist-packages/naoqi_sensors/__init__.py /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_sensors/__init__.py
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib/pkgconfig/naoqi_sensors_py.pc /home/mivia/cog2020_group11/devel/lib/pkgconfig/naoqi_sensors_py.pc
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/include/naoqi_sensors_py/NaoqiCameraConfig.h /home/mivia/cog2020_group11/devel/include/naoqi_sensors_py/NaoqiCameraConfig.h
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/include/naoqi_sensors_py/NaoqiMicrophoneConfig.h /home/mivia/cog2020_group11/devel/include/naoqi_sensors_py/NaoqiMicrophoneConfig.h
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/docs/NaoqiCameraConfig-usage.dox /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/docs/NaoqiCameraConfig-usage.dox
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/docs/NaoqiMicrophoneConfig.wikidoc /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/docs/NaoqiMicrophoneConfig.wikidoc
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/docs/NaoqiMicrophoneConfig.dox /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/docs/NaoqiMicrophoneConfig.dox
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/docs/NaoqiMicrophoneConfig-usage.dox /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/docs/NaoqiMicrophoneConfig-usage.dox
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/docs/NaoqiCameraConfig.dox /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/docs/NaoqiCameraConfig.dox
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/docs/NaoqiCameraConfig.wikidoc /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/docs/NaoqiCameraConfig.wikidoc
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/cmake/naoqi_sensors_pyConfig-version.cmake /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/cmake/naoqi_sensors_pyConfig-version.cmake
+/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/share/naoqi_sensors_py/cmake/naoqi_sensors_pyConfig.cmake /home/mivia/cog2020_group11/devel/share/naoqi_sensors_py/cmake/naoqi_sensors_pyConfig.cmake

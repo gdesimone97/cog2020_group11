@@ -1,0 +1,394 @@
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_StringArrayStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BlinkActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FollowPathActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetFloat
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_AudioBuffer
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BlinkGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetTransform
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SpeechWithFeedbackFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAngleTrajectory
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyROI
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseWithSpeedActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BlinkActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_WordRecognized
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetArmsEnabled
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointTrajectoryAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeed
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeedAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetSpeechVocabularyActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FollowPathActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RunBehaviorActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FadeRGB
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RunBehaviorAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BlinkFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointTrajectoryFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetSpeechVocabularyActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_EventStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetSpeechVocabularyActionFeedback
+[  0%] Built target trajectory_msgs_generate_messages_cpp
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SpeechWithFeedbackActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointTrajectoryResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseWithSpeedResult
+[  0%] Built target geometry_msgs_generate_messages_cpp
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseWithSpeedAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_OrthogonalSecurityDistance
+[  0%] Built target nav_msgs_generate_messages_cpp
+[  0%] Built target actionlib_msgs_generate_messages_cpp
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_StringStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_Bumper
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SpeechWithFeedbackResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_CmdPoseService
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointTrajectoryActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RobotInfo
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseWithSpeedGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeedResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FollowPathGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_HandTouch
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetString
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_MemoryPairString
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_GetRobotInfo
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_TangentialSecurityDistance
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FollowPathActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RunBehaviorActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_MemoryPairFloat
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeedActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetSpeechVocabularyAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseWithSpeedFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_IntArrayStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeedGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetSpeechVocabularyResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_GetFacesROI
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_HeadTouch
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BlinkActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_GetFloat
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RunBehaviorActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RunBehaviorGoal
+[  0%] Built target sensor_msgs_generate_messages_cpp
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_GetBodyROI
+[  0%] Built target std_msgs_generate_messages_cpp
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointTrajectoryActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SoundLocated
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetSpeechVocabularyGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SpeechWithFeedbackGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SpeechWithFeedbackActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RunBehaviorResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointTrajectoryActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SpeechWithFeedbackAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FloatArrayStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseWithSpeedActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_RunBehaviorFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BlinkAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_PoseWithConfidenceStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeedFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_GetTruepose
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FollowPathAction
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeedActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_StatusChangeStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointTrajectoryGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FollowPathResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_MemoryList
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseWithSpeedActionGoal
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FollowPathFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BlinkResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_GetInstalledBehaviors
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FloatStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SpeechWithFeedbackActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_FaceROI
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_JointAnglesWithSpeedActionFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_IntStamped
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_CmdVelService
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_MemoryPairInt
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_SetSpeechVocabularyFeedback
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BodyPoseActionResult
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_BoolStamped
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target std_msgs_generate_messages_eus
+[  0%] Built target _naoqi_bridge_msgs_generate_messages_check_deps_GetString
+[  0%] Built target trajectory_msgs_generate_messages_eus
+[  0%] Built target nav_msgs_generate_messages_eus
+[  0%] Built target actionlib_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_nodejs
+[  0%] Built target std_msgs_generate_messages_nodejs
+[  0%] Built target nav_msgs_generate_messages_nodejs
+[  0%] Built target trajectory_msgs_generate_messages_nodejs
+[  0%] Built target actionlib_msgs_generate_messages_nodejs
+[  0%] Built target geometry_msgs_generate_messages_nodejs
+[  0%] Built target trajectory_msgs_generate_messages_lisp
+[  0%] Built target nav_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_lisp
+[  0%] Built target sensor_msgs_generate_messages_lisp
+[  0%] Built target std_msgs_generate_messages_lisp
+[  0%] Built target actionlib_msgs_generate_messages_lisp
+[  0%] Built target geometry_msgs_generate_messages_py
+[  0%] Built target actionlib_msgs_generate_messages_py
+[  0%] Built target std_msgs_generate_messages_py
+[  0%] Built target nav_msgs_generate_messages_py
+[  0%] Built target trajectory_msgs_generate_messages_py
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointAnglesWithSpeedFeedback.msg[0m
+[ 20%] Built target naoqi_bridge_msgs_generate_messages_eus
+[ 20%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/FollowPathAction.msg[0m
+[ 20%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/FollowPathActionFeedback.msg[0m
+[ 21%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/RunBehaviorActionGoal.msg[0m
+[ 21%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointAnglesWithSpeedActionResult.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointAnglesWithSpeedFeedback.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/FollowPathAction.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/FollowPathActionFeedback.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/RunBehaviorActionGoal.msg[0m
+[ 21%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseWithSpeedFeedback.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointAnglesWithSpeedActionResult.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseWithSpeedFeedback.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SetSpeechVocabularyResult.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BlinkActionGoal.msg[0m
+[ 21%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SetSpeechVocabularyResult.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/RunBehaviorGoal.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointTrajectoryActionFeedback.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SetSpeechVocabularyGoal.msg[0m
+[ 21%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BlinkActionGoal.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SpeechWithFeedbackActionResult.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointTrajectoryResult.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SpeechWithFeedbackGoal.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointTrajectoryActionResult.msg[0m
+[ 21%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/RunBehaviorGoal.msg[0m
+[ 21%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointAnglesWithSpeedResult.msg[0m
+[ 22%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/RunBehaviorFeedback.msg[0m
+[ 23%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointTrajectoryActionFeedback.msg[0m
+[ 23%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseFeedback.msg[0m
+[ 23%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointTrajectoryGoal.msg[0m
+[ 23%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SpeechWithFeedbackActionFeedback.msg[0m
+[ 23%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BlinkAction.msg[0m
+[ 23%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SetSpeechVocabularyGoal.msg[0m
+[ 23%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseWithSpeedActionResult.msg[0m
+[ 23%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/FollowPathResult.msg[0m
+[ 23%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SpeechWithFeedbackActionResult.msg[0m
+[ 24%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SetSpeechVocabularyActionFeedback.msg[0m
+[ 24%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointAnglesWithSpeedGoal.msg[0m
+[ 24%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseActionGoal.msg[0m
+[ 24%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointTrajectoryResult.msg[0m
+[ 24%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointTrajectoryFeedback.msg[0m
+[ 24%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BlinkFeedback.msg[0m
+[ 25%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/FollowPathGoal.msg[0m
+[ 25%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SpeechWithFeedbackGoal.msg[0m
+[ 25%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseActionFeedback.msg[0m
+[ 25%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/RunBehaviorActionResult.msg[0m
+[ 25%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/FollowPathActionResult.msg[0m
+[ 26%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointTrajectoryActionResult.msg[0m
+[ 26%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointAnglesWithSpeedActionGoal.msg[0m
+[ 27%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseResult.msg[0m
+[ 27%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseWithSpeedGoal.msg[0m
+[ 27%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SetSpeechVocabularyActionResult.msg[0m
+[ 27%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointAnglesWithSpeedResult.msg[0m
+[ 28%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointAnglesWithSpeedAction.msg[0m
+[ 28%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseWithSpeedAction.msg[0m
+[ 28%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointTrajectoryAction.msg[0m
+[ 28%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/RunBehaviorFeedback.msg[0m
+[ 28%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BlinkActionFeedback.msg[0m
+[ 29%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseWithSpeedActionFeedback.msg[0m
+[ 29%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseFeedback.msg[0m
+[ 29%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/RunBehaviorAction.msg[0m
+[ 29%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/RunBehaviorActionFeedback.msg[0m
+[ 30%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SpeechWithFeedbackFeedback.msg[0m
+[ 31%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointTrajectoryGoal.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/RunBehaviorResult.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BlinkResult.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BlinkGoal.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointTrajectoryActionGoal.msg[0m
+[ 31%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SpeechWithFeedbackActionFeedback.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/FollowPathActionGoal.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BlinkActionResult.msg[0m
+[ 31%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BlinkAction.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SetSpeechVocabularyActionGoal.msg[0m
+[ 31%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/FollowPathFeedback.msg[0m
+[ 32%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseGoal.msg[0m
+[ 32%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SpeechWithFeedbackResult.msg[0m
+[ 32%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseWithSpeedActionResult.msg[0m
+[ 32%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseActionResult.msg[0m
+[ 32%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SetSpeechVocabularyAction.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseWithSpeedActionGoal.msg[0m
+[ 33%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/FollowPathResult.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SpeechWithFeedbackActionGoal.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SetSpeechVocabularyFeedback.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/JointAnglesWithSpeedActionFeedback.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseWithSpeedResult.msg[0m
+[ 33%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SetSpeechVocabularyActionFeedback.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/SpeechWithFeedbackAction.msg[0m
+[ 33%] [34m[1mGenerating Javascript code from naoqi_bridge_msgs/BodyPoseAction.msg[0m
+[ 33%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointAnglesWithSpeedGoal.msg[0m
+[ 44%] Built target naoqi_bridge_msgs_generate_messages_nodejs
+[ 44%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointAnglesWithSpeedFeedback.msg[0m
+[ 44%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/FollowPathAction.msg[0m
+[ 44%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseActionGoal.msg[0m
+[ 45%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/FollowPathActionFeedback.msg[0m
+[ 45%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/RunBehaviorActionGoal.msg[0m
+[ 45%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointAnglesWithSpeedActionResult.msg[0m
+[ 46%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointTrajectoryFeedback.msg[0m
+[ 46%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseWithSpeedFeedback.msg[0m
+[ 46%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SetSpeechVocabularyResult.msg[0m
+[ 46%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BlinkFeedback.msg[0m
+[ 46%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BlinkActionGoal.msg[0m
+[ 47%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/RunBehaviorGoal.msg[0m
+[ 47%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointTrajectoryActionFeedback.msg[0m
+[ 47%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/FollowPathGoal.msg[0m
+[ 47%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SetSpeechVocabularyGoal.msg[0m
+[ 47%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SpeechWithFeedbackActionResult.msg[0m
+[ 47%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointTrajectoryResult.msg[0m
+[ 47%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseActionFeedback.msg[0m
+[ 48%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SpeechWithFeedbackGoal.msg[0m
+[ 48%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointTrajectoryActionResult.msg[0m
+[ 48%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/RunBehaviorActionResult.msg[0m
+[ 48%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointAnglesWithSpeedResult.msg[0m
+[ 48%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/RunBehaviorFeedback.msg[0m
+[ 48%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseFeedback.msg[0m
+[ 50%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/FollowPathActionResult.msg[0m
+[ 50%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointTrajectoryGoal.msg[0m
+[ 50%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SpeechWithFeedbackActionFeedback.msg[0m
+[ 50%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointAnglesWithSpeedActionGoal.msg[0m
+[ 50%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BlinkAction.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseWithSpeedActionResult.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/FollowPathResult.msg[0m
+[ 51%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseResult.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SetSpeechVocabularyActionFeedback.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointAnglesWithSpeedGoal.msg[0m
+[ 51%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseWithSpeedGoal.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseActionGoal.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointTrajectoryFeedback.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BlinkFeedback.msg[0m
+[ 51%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SetSpeechVocabularyActionResult.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/FollowPathGoal.msg[0m
+[ 51%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseActionFeedback.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/RunBehaviorActionResult.msg[0m
+[ 52%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointAnglesWithSpeedAction.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/FollowPathActionResult.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointAnglesWithSpeedActionGoal.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseResult.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseWithSpeedGoal.msg[0m
+[ 52%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseWithSpeedAction.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SetSpeechVocabularyActionResult.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointAnglesWithSpeedAction.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseWithSpeedAction.msg[0m
+[ 52%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointTrajectoryAction.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointTrajectoryAction.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BlinkActionFeedback.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseWithSpeedActionFeedback.msg[0m
+[ 52%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BlinkActionFeedback.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/RunBehaviorAction.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/RunBehaviorActionFeedback.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SpeechWithFeedbackFeedback.msg[0m
+[ 52%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseWithSpeedActionFeedback.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/RunBehaviorResult.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BlinkResult.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BlinkGoal.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointTrajectoryActionGoal.msg[0m
+[ 52%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/RunBehaviorAction.msg[0m
+[ 52%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/FollowPathActionGoal.msg[0m
+[ 53%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BlinkActionResult.msg[0m
+[ 53%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SetSpeechVocabularyActionGoal.msg[0m
+[ 54%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/RunBehaviorActionFeedback.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/FollowPathFeedback.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseGoal.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SpeechWithFeedbackResult.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseActionResult.msg[0m
+[ 54%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SpeechWithFeedbackFeedback.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SetSpeechVocabularyAction.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseWithSpeedActionGoal.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SpeechWithFeedbackActionGoal.msg[0m
+[ 54%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/RunBehaviorResult.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SetSpeechVocabularyFeedback.msg[0m
+[ 54%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/JointAnglesWithSpeedActionFeedback.msg[0m
+[ 54%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BlinkResult.msg[0m
+[ 55%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseWithSpeedResult.msg[0m
+[ 55%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/SpeechWithFeedbackAction.msg[0m
+[ 55%] [34m[1mGenerating Lisp code from naoqi_bridge_msgs/BodyPoseAction.msg[0m
+[ 67%] Built target naoqi_bridge_msgs_generate_messages_lisp
+[ 67%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BlinkGoal.msg[0m
+[ 67%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointAnglesWithSpeedFeedback[0m
+[ 67%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/FollowPathAction[0m
+[ 67%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointTrajectoryActionGoal.msg[0m
+[ 68%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/FollowPathActionFeedback[0m
+[ 68%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/FollowPathActionGoal.msg[0m
+[ 68%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/RunBehaviorActionGoal[0m
+[ 68%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BlinkActionResult.msg[0m
+[ 68%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointAnglesWithSpeedActionResult[0m
+[ 68%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseWithSpeedFeedback[0m
+[ 69%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SetSpeechVocabularyActionGoal.msg[0m
+[ 69%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SetSpeechVocabularyResult[0m
+[ 69%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/FollowPathFeedback.msg[0m
+[ 69%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BlinkActionGoal[0m
+[ 69%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/RunBehaviorGoal[0m
+[ 69%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseGoal.msg[0m
+[ 70%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointTrajectoryActionFeedback[0m
+[ 70%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SpeechWithFeedbackResult.msg[0m
+[ 70%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SetSpeechVocabularyGoal[0m
+[ 70%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SpeechWithFeedbackActionResult[0m
+[ 71%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseActionResult.msg[0m
+[ 71%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointTrajectoryResult[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SpeechWithFeedbackGoal[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SetSpeechVocabularyAction.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointTrajectoryActionResult[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseWithSpeedActionGoal.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointAnglesWithSpeedResult[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SpeechWithFeedbackActionGoal.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/RunBehaviorFeedback[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseFeedback[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SetSpeechVocabularyFeedback.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointTrajectoryGoal[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/JointAnglesWithSpeedActionFeedback.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SpeechWithFeedbackActionFeedback[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseWithSpeedResult.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BlinkAction[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/SpeechWithFeedbackAction.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseWithSpeedActionResult[0m
+[ 72%] [34m[1mGenerating C++ code from naoqi_bridge_msgs/BodyPoseAction.msg[0m
+[ 72%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/FollowPathResult[0m
+[ 82%] Built target naoqi_bridge_msgs_generate_messages_cpp
+[ 82%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SetSpeechVocabularyActionFeedback[0m
+[ 82%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointAnglesWithSpeedGoal[0m
+[ 82%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseActionGoal[0m
+[ 82%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointTrajectoryFeedback[0m
+[ 82%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BlinkFeedback[0m
+[ 82%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/FollowPathGoal[0m
+[ 82%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseActionFeedback[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/RunBehaviorActionResult[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/FollowPathActionResult[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointAnglesWithSpeedActionGoal[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseResult[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseWithSpeedGoal[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SetSpeechVocabularyActionResult[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointAnglesWithSpeedAction[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseWithSpeedAction[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointTrajectoryAction[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BlinkActionFeedback[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseWithSpeedActionFeedback[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/RunBehaviorAction[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/RunBehaviorActionFeedback[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SpeechWithFeedbackFeedback[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/RunBehaviorResult[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BlinkResult[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BlinkGoal[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointTrajectoryActionGoal[0m
+[ 83%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/FollowPathActionGoal[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BlinkActionResult[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SetSpeechVocabularyActionGoal[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/FollowPathFeedback[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseGoal[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SpeechWithFeedbackResult[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseActionResult[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SetSpeechVocabularyAction[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseWithSpeedActionGoal[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SpeechWithFeedbackActionGoal[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SetSpeechVocabularyFeedback[0m
+[ 84%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/JointAnglesWithSpeedActionFeedback[0m
+[ 85%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseWithSpeedResult[0m
+[ 85%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/SpeechWithFeedbackAction[0m
+[ 85%] [34m[1mGenerating Python from MSG naoqi_bridge_msgs/BodyPoseAction[0m
+[ 85%] [34m[1mGenerating Python msg __init__.py for naoqi_bridge_msgs[0m
+[ 86%] [34m[1mGenerating Python srv __init__.py for naoqi_bridge_msgs[0m
+[100%] Built target naoqi_bridge_msgs_generate_messages_py
+[100%] Built target naoqi_bridge_msgs_generate_messages

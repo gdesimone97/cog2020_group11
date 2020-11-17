@@ -1,0 +1,5 @@
+naoqi_bridge/naoqi_pose
+/home/mivia/cog2020_group11/devel/.private/naoqi_pose/lib/python2.7/dist-packages/xapparser/__init__.py /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/xapparser/__init__.py
+/home/mivia/cog2020_group11/devel/.private/naoqi_pose/lib/pkgconfig/naoqi_pose.pc /home/mivia/cog2020_group11/devel/lib/pkgconfig/naoqi_pose.pc
+/home/mivia/cog2020_group11/devel/.private/naoqi_pose/share/naoqi_pose/cmake/naoqi_poseConfig.cmake /home/mivia/cog2020_group11/devel/share/naoqi_pose/cmake/naoqi_poseConfig.cmake
+/home/mivia/cog2020_group11/devel/.private/naoqi_pose/share/naoqi_pose/cmake/naoqi_poseConfig-version.cmake /home/mivia/cog2020_group11/devel/share/naoqi_pose/cmake/naoqi_poseConfig-version.cmake

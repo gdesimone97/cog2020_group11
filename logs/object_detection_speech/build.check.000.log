@@ -1,0 +1,35 @@
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/mivia/cog2020_group11/devel/.private/object_detection_speech
+[36m--[0m Using CMAKE_PREFIX_PATH: /home/mivia/cog2020_group11/devel;/opt/ros/melodic
+[36m--[0m This workspace overlays: /home/mivia/cog2020_group11/devel;/opt/ros/melodic
+[36m--[0m Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.15", minimum required is "2")
+[36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python2
+[36m--[0m Using Debian Python package layout
+[36m--[0m Using empy: /usr/bin/empy
+[36m--[0m Using CATKIN_ENABLE_TESTING: ON
+[36m--[0m Call enable_testing()
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/mivia/cog2020_group11/build/object_detection_speech/test_results
+[36m--[0m Found gmock sources under '/usr/src/googletest': gmock will be built
+[36m--[0m Found PythonInterp: /usr/bin/python2 (found version "2.7.15")
+[36m--[0m Found gtest sources under '/usr/src/googletest': gtests will be built
+[36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
+[36m--[0m catkin 0.7.14
+[36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+[31m[1mCMake Error[0m at /home/mivia/cog2020_group11/build/object_detection_speech/cmake/object_detection_speech-genmsg.cmake:3 (message):
+  Could not find messages which
+  '/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg'
+  depends on.  Did you forget to specify generate_messages(DEPENDENCIES ...)?
+
+  Cannot locate message [Image]: unknown package [sensor_msgs] on search path
+  [{{'object_detection_speech':
+  ['/home/mivia/cog2020_group11/src/object_detection_speech/msg'],
+  'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}}]
+[36mCall Stack (most recent call first):[0m
+  /opt/ros/melodic/share/genmsg/cmake/genmsg-extras.cmake:307 (include)
+  CMakeLists.txt:72 (generate_messages)
+
+
+[36m--[0m Configuring incomplete, errors occurred!
+See also "/home/mivia/cog2020_group11/build/object_detection_speech/CMakeFiles/CMakeOutput.log".
+See also "/home/mivia/cog2020_group11/build/object_detection_speech/CMakeFiles/CMakeError.log".
+Makefile:600: recipe for target 'cmake_check_build_system' failed
+make: *** [cmake_check_build_system] Error 1
