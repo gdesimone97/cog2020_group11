@@ -11,7 +11,7 @@ import json
 import os
 from object_detection_speech.msg import ImagePos
 from head_movement import HeadMovement
-from threading import Lock
+from threading import Condition
 
 class Detector():
     TOPIC_SUB = "frame_read"
@@ -21,6 +21,7 @@ class Detector():
         rospy.init_node('object_detection')
         rospy.Service("capture_ended", capture_ended, self.handleService)
         rospy.Subscriber(Detector.TOPIC_SUB, ImagePos, self.callback)
+        self.count = 0
         self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
 
     def callback(self, data: ImagePos):
@@ -48,10 +49,13 @@ class Detector():
             else:
                 self.dict_obj[pos][classmap[c]] = self.dict_obj[pos][classmap[c]] + 1
         print(pos, self.dict_obj[pos])
+        self.count += 1
 
     def handleService(self, req):
         
         rospy.wait_for_service('animatedSay')
+        scheduler.wait_for(self.count == 3)
+        self.count = 0
         try:
             call = rospy.ServiceProxy('animatedSay', Say)
             s = json.dumps(self.dict_obj)
@@ -75,6 +79,7 @@ class Detector():
 
 if __name__ == '__main__':
     print('Loading model...', end='')
+    scheduler = Condition()
     DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
     detect_fn = tf.saved_model.load(DET_PATH)
     print('Done!')
