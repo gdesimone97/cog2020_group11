@@ -7,6 +7,8 @@ import json
 
 class AnimatedSay(NaoqiNode):
     TOPIC_SUB = "obj_detected"
+    IP = "10.0.1.230"
+    PORT = "9559"
 
     def __init__(self):
         NaoqiNode.__init__(self, 'animated_speech')
@@ -32,7 +34,7 @@ class AnimatedSay(NaoqiNode):
         return SayResponse(True)
 
     def connectNaoQi(self):
-        self.speech = self.get_proxy("ALAnimatedSpeech")
+        self.speech = self.get_proxy("ALAnimatedSpeech", AnimatedSay.IP, AnimatedSay.PORT)
         self.s = rospy.Service('animatedSay', Say, self.say)
 
     def pos2string(self, pos):
