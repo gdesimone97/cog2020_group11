@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 import rospy
 import tensorflow as tf
-assert(int(tf.__version__.split('.')[0]) >= 2)
+
+assert (int(tf.__version__.split('.')[0]) >= 2)
 import ros_numpy
 import numpy as np
 from classmap import category_map as classmap
@@ -12,6 +13,7 @@ import os
 from object_detection_speech.msg import ImagePos
 from head_movement import HeadMovement
 from threading import Condition
+
 
 class Detector():
     TOPIC_SUB = "frame_read"
@@ -24,6 +26,9 @@ class Detector():
         self.count = 0
         self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
 
+    def _count_end(self):
+        return self.count == 3
+
     def callback(self, data: ImagePos):
         pos = data.pos
 
@@ -32,18 +37,18 @@ class Detector():
 
         # image preprocessing
         img_copy = img.copy()
-        img = img[:,:,::-1]
+        img = img[:, :, ::-1]
         input_tensor = tf.convert_to_tensor(img)
         input_tensor = input_tensor[tf.newaxis, ...]
 
         # detect classes into the image
         detections = detect_fn(input_tensor)
-        num_above_thresh = np.sum( detections['detection_scores'] > 0.5 )
+        num_above_thresh = np.sum(detections['detection_scores'] > 0.5)
         detections.pop('num_detections')
         detections = {key: value[0, :num_above_thresh].numpy() for key, value in detections.items()}
         detections['detection_classes'] = detections['detection_classes'].astype(np.int64)
-        
-        for c,s in zip(detections['detection_classes'], detections['detection_scores']):
+
+        for c, s in zip(detections['detection_classes'], detections['detection_scores']):
             if self.dict_obj[pos].get(classmap[c]) is None:
                 self.dict_obj[pos][classmap[c]] = 1
             else:
@@ -52,9 +57,9 @@ class Detector():
         self.count += 1
 
     def handleService(self, req):
-        
+
         rospy.wait_for_service('animatedSay')
-        scheduler.wait_for(self.count == 3)
+        scheduler.wait_for(self._count_end)
         self.count = 0
         try:
             call = rospy.ServiceProxy('animatedSay', Say)
@@ -65,14 +70,14 @@ class Detector():
             self.dict_obj[HeadMovement.SINISTRA].clear()
             self.dict_obj[HeadMovement.DESTRA].clear()
             print(self.dict_obj)
-            #self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
+            # self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
             return capture_endedResponse(resp1.result)
         except rospy.ServiceException as e:
-            rospy.logwarn("Service call failed: %s" %e)
+            rospy.logwarn("Service call failed: %s" % e)
             self.dict_obj[HeadMovement.CENTRO].clear()
             self.dict_obj[HeadMovement.SINISTRA].clear()
             self.dict_obj[HeadMovement.DESTRA].clear()
-            #self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
+            # self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
             print(self.dict_obj)
             return capture_endedResponse(False)
 
