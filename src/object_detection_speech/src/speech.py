@@ -21,20 +21,22 @@ class AnimatedSay(NaoqiNode):
         
         # Converting Json
         dictionary = json.loads(data.message)
+        print("dict: ", dictionary)
         stringa = ""
         for k,v in dictionary.items():
             stringa = stringa + "In the " + self.pos2string(k) + " I saw: "
             for object, num in v.items():
-                stringa = stringa + "a " + object + " " + str(num) + ("times" if num > 1 else "time") + ", "
+                stringa = stringa + "a " + object + " " + str(num) + (" times" if num > 1 else " time") + ", "
             stringa = stringa + ". "
 
         stringa = stringa + "Finished."
+        print(stringa)
         self.speech.say(stringa)
         rospy.loginfo("END: %s" %data.message)
         return SayResponse(True)
 
     def connectNaoQi(self):
-        self.speech = self.get_proxy("ALAnimatedSpeech", AnimatedSay.IP, AnimatedSay.PORT)
+        self.speech = self.get_proxy("ALAnimatedSpeech", AnimatedSay.IP)
         self.s = rospy.Service('animatedSay', Say, self.say)
 
     def pos2string(self, pos):
@@ -49,5 +51,7 @@ class AnimatedSay(NaoqiNode):
 
 if __name__ == '__main__':
     #rospy.init_node('speak')
+    #rospy.set_param("~pip", "10.0.1.230")
+    #rospy.set_param("~pport", 9559)
     pub = AnimatedSay()
     rospy.spin()

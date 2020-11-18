@@ -1,3 +1,3 @@
-Linked: (/home/mivia/cog2020_group11/devel/.private/pepper_description/lib/pkgconfig/pepper_description.pc, /home/mivia/cog2020_group11/devel/lib/pkgconfig/pepper_description.pc)
-Linked: (/home/mivia/cog2020_group11/devel/.private/pepper_description/share/pepper_description/cmake/pepper_descriptionConfig.cmake, /home/mivia/cog2020_group11/devel/share/pepper_description/cmake/pepper_descriptionConfig.cmake)
-Linked: (/home/mivia/cog2020_group11/devel/.private/pepper_description/share/pepper_description/cmake/pepper_descriptionConfig-version.cmake, /home/mivia/cog2020_group11/devel/share/pepper_description/cmake/pepper_descriptionConfig-version.cmake)
+Symlinking /home/mivia/cog2020_group11/devel/lib/pkgconfig/pepper_description.pc
+Symlinking /home/mivia/cog2020_group11/devel/share/pepper_description/cmake/pepper_descriptionConfig.cmake
+Symlinking /home/mivia/cog2020_group11/devel/share/pepper_description/cmake/pepper_descriptionConfig-version.cmake
