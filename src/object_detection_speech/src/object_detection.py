@@ -36,7 +36,6 @@ class Detector():
         input_tensor = input_tensor[tf.newaxis, ...]
 
         # detect classes into the image
-        lock.acquire()
         detections = detect_fn(input_tensor)
         num_above_thresh = np.sum( detections['detection_scores'] > 0.5 )
         detections.pop('num_detections')
@@ -49,12 +48,10 @@ class Detector():
             else:
                 self.dict_obj[pos][classmap[c]] = self.dict_obj[pos][classmap[c]] + 1
         print(pos, self.dict_obj[pos])
-        lock.release()
 
     def handleService(self, req):
         
         rospy.wait_for_service('animatedSay')
-        lock.acquire()
         try:
             call = rospy.ServiceProxy('animatedSay', Say)
             s = json.dumps(self.dict_obj)
@@ -65,7 +62,6 @@ class Detector():
             self.dict_obj[HeadMovement.DESTRA].clear()
             print(self.dict_obj)
             #self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
-            lock.release()
             return capture_endedResponse(resp1.result)
         except rospy.ServiceException as e:
             rospy.logwarn("Service call failed: %s" %e)
@@ -74,13 +70,11 @@ class Detector():
             self.dict_obj[HeadMovement.DESTRA].clear()
             #self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
             print(self.dict_obj)
-            lock.release()
             return capture_endedResponse(False)
 
 
 if __name__ == '__main__':
     print('Loading model...', end='')
-    lock = Lock()
     DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
     detect_fn = tf.saved_model.load(DET_PATH)
     print('Done!')
