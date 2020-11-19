@@ -137,6 +137,7 @@ class NaoqiNode(Thread):
         proxy = None
         try:
             proxy = ALProxy(name,"10.0.1.230",self.pport)
+            
         except RuntimeError,e:
             if warn:
                 rospy.logerr("Could not create Proxy to \"%s\". \nException message:\n%s",name, e)
