@@ -17,22 +17,22 @@ class AnimatedSay(NaoqiNode):
 
     def say(self, data):
         rospy.loginfo("START: %s" %data.message)
-        self.speech.say("These are the objects that i detected:")
+        self.speech.say("Questi sono gli oggetti che ho rilevato:")
         
         # Converting Json
         dictionary = json.loads(data.message)
         print("dict: ", dictionary)
         stringa = ""
         for k,v in dictionary.items():
-            stringa = stringa + "In the " + self.pos2string(k) + " I saw: "
+            stringa = stringa + self.pos2string(k) + " ho visto: "
             if len(v) == 0:
-                stringa = stringa + "Nothing."
+                stringa = stringa + "Niente. "
             else:
                 for obj, num in v.items():
-                    stringa = stringa + "a " + obj + " " + str(num) + (" times" if num > 1 else " time") + ", "
+                    stringa = stringa + "un " + obj + " " + str(num) + (" volte" if num > 1 else " volta") + ", "
                 stringa = stringa + ". "
 
-        stringa = stringa + "Finished."
+        stringa = stringa + "Finito."
         print(stringa)
         self.speech.say(str(stringa))
         rospy.loginfo("END: %s" %data.message)
@@ -45,11 +45,11 @@ class AnimatedSay(NaoqiNode):
     def pos2string(self, pos):
         pos = int(pos)
         if pos == HeadMovement.DESTRA:
-            return "Right"
+            return "A Destra"
         elif pos == HeadMovement.CENTRO:
-            return "Center"
+            return "Al Centro"
         elif pos == HeadMovement.SINISTRA:
-            return "Left"
+            return "A Sinistra"
 
 
 if __name__ == '__main__':
