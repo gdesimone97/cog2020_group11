@@ -25,13 +25,16 @@ class AnimatedSay(NaoqiNode):
         stringa = ""
         for k,v in dictionary.items():
             stringa = stringa + "In the " + self.pos2string(k) + " I saw: "
-            for object, num in v.items():
-                stringa = stringa + "a " + object + " " + str(num) + (" times" if num > 1 else " time") + ", "
-            stringa = stringa + ". "
+            if len(v) == 0:
+                stringa = stringa + "Nothing."
+            else:
+                for obj, num in v.items():
+                    stringa = stringa + "a " + obj + " " + str(num) + (" times" if num > 1 else " time") + ", "
+                stringa = stringa + ". "
 
         stringa = stringa + "Finished."
         print(stringa)
-        self.speech.say(stringa)
+        self.speech.say(str(stringa))
         rospy.loginfo("END: %s" %data.message)
         return SayResponse(True)
 

@@ -28,10 +28,17 @@ class Detector():
 
     def _count_end(self):
         return self.count == 3
+        
+    def sum_count(self):
+        self.count += 1
+        if self.count == 3:
+            scheduler.acquire()
+            scheduler.notify()
+            scheduler.release()
+    
 
     def callback(self, data: ImagePos):
         pos = data.pos
-
         # convert Image into numpy array
         img = ros_numpy.numpify(data.image)
 
@@ -54,12 +61,17 @@ class Detector():
             else:
                 self.dict_obj[pos][classmap[c]] = self.dict_obj[pos][classmap[c]] + 1
         print(pos, self.dict_obj[pos])
-        self.count += 1
+        self.sum_count()
 
     def handleService(self, req):
 
         rospy.wait_for_service('animatedSay')
-        scheduler.wait_for(self._count_end)
+        
+        if(self.count != 3):
+            scheduler.acquire()
+            scheduler.wait()
+            scheduler.release()
+            
         self.count = 0
         try:
             call = rospy.ServiceProxy('animatedSay', Say)
