@@ -125,11 +125,12 @@ class Detector():
 
 
 if __name__ == '__main__':
-    call = rospy.ServiceProxy('animatedSay', Say)
     print('Loading model...', end='')
     scheduler = Condition()
     DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
     detect_fn = tf.saved_model.load(DET_PATH)
     print('Done!')
+    rospy.wait_for_service('animatedSay')
+    call = rospy.ServiceProxy('animatedSay', Say)
     det = Detector()
     rospy.spin()

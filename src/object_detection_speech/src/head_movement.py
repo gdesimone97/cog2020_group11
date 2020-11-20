@@ -61,6 +61,7 @@ class HeadMovement():
         return resp1
 
 if __name__ == "__main__":
+    rospy.wait_for_service('animatedSay')
     call = rospy.ServiceProxy('animatedSay', Say)
     headMovement = HeadMovement()
 
