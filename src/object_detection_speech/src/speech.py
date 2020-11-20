@@ -17,40 +17,13 @@ class AnimatedSay(NaoqiNode):
 
     def say(self, data):
         rospy.loginfo("START: %s" %data.message)
-        self.speech.say("Questi sono gli oggetti che ho rilevato:")
-        
-        # Converting Json
-        dictionary = json.loads(data.message)
-        print("dict: ", dictionary)
-        stringa = ""
-        for k,v in dictionary.items():
-            stringa = stringa + self.pos2string(k) + " ho visto: "
-            if len(v) == 0:
-                stringa = stringa + "Niente. "
-            else:
-                for obj, num in v.items():
-                    stringa = stringa + "un " + obj + " " + str(num) + (" volte" if num > 1 else " volta") + ", "
-                stringa = stringa + ". "
-
-        stringa = stringa + "Finito."
-        print(stringa)
-        self.speech.say(str(stringa))
-        rospy.loginfo("END: %s" %data.message)
+        self.speech.say(str(data.message))
         return SayResponse(True)
 
     def connectNaoQi(self):
         self.speech = self.get_proxy("ALAnimatedSpeech")
         self.speech.setLanguage("English")
         self.s = rospy.Service('animatedSay', Say, self.say)
-
-    def pos2string(self, pos):
-        pos = int(pos)
-        if pos == HeadMovement.DESTRA:
-            return "A Destra"
-        elif pos == HeadMovement.CENTRO:
-            return "Al Centro"
-        elif pos == HeadMovement.SINISTRA:
-            return "A Sinistra"
 
 
 if __name__ == '__main__':

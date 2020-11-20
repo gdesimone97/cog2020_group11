@@ -35,7 +35,47 @@ class Detector():
             scheduler.acquire()
             scheduler.notify()
             scheduler.release()
-    
+
+    def talk(self):
+
+        def pos2string(self, pos):
+            pos = int(pos)
+            if pos == HeadMovement.DESTRA:
+                #return "A Destra"
+                return  "On the right"
+            elif pos == HeadMovement.CENTRO:
+                #return "Al Centro"
+                return "In the center"
+            elif pos == HeadMovement.SINISTRA:
+                #return "A Sinistra"
+                return "On the left"
+
+        #stringa = "Questi sono gli oggetti che ho rilevato:"
+        stringa = "I detected these objects: "
+        for k, v in self.dict_obj.items():
+            #stringa = stringa + self.pos2string(k) + " ho visto: "
+            stringa = stringa + self.pos2string(k) + " I saw: "
+            if len(v) == 0:
+                #stringa = stringa + "Niente. "
+                stringa = stringa + "nothing. "
+            else:
+                for obj, num in v.items():
+                    #stringa = stringa + "un " + obj + " " + str(num) + (" volte" if num > 1 else " volta") + ", "
+                    stringa = stringa + "un " + obj + " " + str(num) + (" times" if num > 1 else " time") + ", "
+                stringa = stringa + ". "
+
+        #stringa = stringa + "Finito."
+        stringa = stringa + "Finished."
+        print(stringa)
+        rospy.wait_for_service('animatedSay')
+        resp1: Say = call(stringa)
+        return resp1
+
+    def _clear_dict(self):
+
+        self.dict_obj[HeadMovement.CENTRO].clear()
+        self.dict_obj[HeadMovement.SINISTRA].clear()
+        self.dict_obj[HeadMovement.DESTRA].clear()
 
     def callback(self, data: ImagePos):
         pos = data.pos
@@ -65,7 +105,6 @@ class Detector():
 
     def handleService(self, req):
 
-        rospy.wait_for_service('animatedSay')
         
         if(self.count != 3):
             scheduler.acquire()
@@ -74,27 +113,19 @@ class Detector():
             
         self.count = 0
         try:
-            call = rospy.ServiceProxy('animatedSay', Say)
-            s = json.dumps(self.dict_obj)
-            print("output: ", s)
-            resp1: Say = call(s)
-            self.dict_obj[HeadMovement.CENTRO].clear()
-            self.dict_obj[HeadMovement.SINISTRA].clear()
-            self.dict_obj[HeadMovement.DESTRA].clear()
+            resp = self.talk()
+            self._clear_dict()
             print(self.dict_obj)
-            # self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
-            return capture_endedResponse(resp1.result)
+            return capture_endedResponse(resp.result)
         except rospy.ServiceException as e:
             rospy.logwarn("Service call failed: %s" % e)
-            self.dict_obj[HeadMovement.CENTRO].clear()
-            self.dict_obj[HeadMovement.SINISTRA].clear()
-            self.dict_obj[HeadMovement.DESTRA].clear()
-            # self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
+            self._clear_dict()
             print(self.dict_obj)
             return capture_endedResponse(False)
 
 
 if __name__ == '__main__':
+    call = rospy.ServiceProxy('animatedSay', Say)
     print('Loading model...', end='')
     scheduler = Condition()
     DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
