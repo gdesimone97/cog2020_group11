@@ -38,7 +38,7 @@ class Detector():
 
     def talk(self):
 
-        def pos2string(self, pos):
+        def pos2string(pos):
             pos = int(pos)
             if pos == HeadMovement.DESTRA:
                 #return "A Destra"
@@ -54,21 +54,21 @@ class Detector():
         stringa = "I detected these objects: "
         for k, v in self.dict_obj.items():
             #stringa = stringa + self.pos2string(k) + " ho visto: "
-            stringa = stringa + self.pos2string(k) + " I saw: "
+            stringa = stringa + pos2string(k) + " I saw: "
             if len(v) == 0:
                 #stringa = stringa + "Niente. "
                 stringa = stringa + "nothing. "
             else:
                 for obj, num in v.items():
                     #stringa = stringa + "un " + obj + " " + str(num) + (" volte" if num > 1 else " volta") + ", "
-                    stringa = stringa + "un " + obj + " " + str(num) + (" times" if num > 1 else " time") + ", "
+                    stringa = stringa + (str(num) if num>1 else "a") + " " + obj + ("s" if num > 1 else "") + ", "
                 stringa = stringa + ". "
 
         #stringa = stringa + "Finito."
         stringa = stringa + "Finished."
         print(stringa)
         rospy.wait_for_service('animatedSay')
-        resp1: Say = call(stringa)
+        resp1= call(stringa)
         return resp1
 
     def _clear_dict(self):
@@ -125,12 +125,13 @@ class Detector():
 
 
 if __name__ == '__main__':
+    rospy.wait_for_service('animatedSay')
+    call = rospy.ServiceProxy('animatedSay', Say)
+    call("One moment please. I'm loading the model into my brain")
     print('Loading model...', end='')
     scheduler = Condition()
     DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
     detect_fn = tf.saved_model.load(DET_PATH)
     print('Done!')
-    rospy.wait_for_service('animatedSay')
-    call = rospy.ServiceProxy('animatedSay', Say)
     det = Detector()
     rospy.spin()

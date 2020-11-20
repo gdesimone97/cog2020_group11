@@ -1,7 +1,7 @@
 #!/usr/bin/python2.7
 import rospy
 from naoqi_bridge_msgs.msg import JointAnglesWithSpeed
-from object_detection_speech.srv import Capture, capture_ended, Say
+from object_detection_speech.srv import Capture, capture_ended
 
 class HeadMovement():
 
@@ -17,7 +17,7 @@ class HeadMovement():
         self.s.joint_names = ['HeadPitch', 'HeadYaw']
         self.s.relative = 0
         self.s.speed = 0.2
-        self.rate = rospy.Rate(0.3)
+        self.rate = rospy.Rate(0.32)
 
     def move_head(self, pos, capture=True):
 
@@ -54,24 +54,15 @@ class HeadMovement():
             return False
         return True
 
-    def talk(self, msg):
-
-        rospy.wait_for_service('animatedSay')
-        resp1: Say = call(msg)
-        return resp1
 
 if __name__ == "__main__":
-    rospy.wait_for_service('animatedSay')
-    call = rospy.ServiceProxy('animatedSay', Say)
     headMovement = HeadMovement()
-
+    headMovement.move_head(HeadMovement.CENTRO, False)
     rospy.loginfo("Sto aspettando Capture")
     rospy.wait_for_service('Capture')
     rospy.loginfo("Sto aspettando capture_ended")
 
-    headMovement.talk("One moment please. I'm loading the loading the model into my brain")
     rospy.wait_for_service('capture_ended')
-    headMovement.move_head(HeadMovement.CENTRO, False)
     headMovement.move_head(HeadMovement.SINISTRA)
     headMovement.move_head(HeadMovement.CENTRO)
     headMovement.move_head(HeadMovement.DESTRA)

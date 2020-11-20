@@ -2,7 +2,6 @@
 import rospy
 from naoqi_driver.naoqi_node import NaoqiNode
 from object_detection_speech.srv import Say, SayResponse
-from head_movement import HeadMovement
 import json
 
 class AnimatedSay(NaoqiNode):
@@ -22,7 +21,7 @@ class AnimatedSay(NaoqiNode):
 
     def connectNaoQi(self):
         self.speech = self.get_proxy("ALAnimatedSpeech")
-        self.speech.setLanguage("English")
+        #self.speech.setLanguage("English")
         self.s = rospy.Service('animatedSay', Say, self.say)
 
 
