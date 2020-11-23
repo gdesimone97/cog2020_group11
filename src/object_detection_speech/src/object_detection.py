@@ -127,7 +127,7 @@ class Detector():
 if __name__ == '__main__':
     rospy.wait_for_service('animatedSay')
     call = rospy.ServiceProxy('animatedSay', Say)
-    call("One moment please. I'm loading the model into my brain")
+    #call("One moment please. I'm loading the model into my brain")
     print('Loading model...', end='')
     scheduler = Condition()
     DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
