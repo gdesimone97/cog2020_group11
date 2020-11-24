@@ -16,19 +16,30 @@ from threading import Condition
 
 
 class Detector():
+    #This class performs a subscription to the topic TOPIC_SUB to retrieve the captured image, while publish on the topic 
+    #TOPIC_PUB to publish/return the result of the image detection on the previously captured image
     TOPIC_SUB = "frame_read"
     TOPIC_PUB = "obj_detected"
 
+
+
     def __init__(self):
+        #Initialize the node 'object_detection'
         rospy.init_node('object_detection')
+        #Create the service 'capture_ended' and start it
         rospy.Service("capture_ended", capture_ended, self.handleService)
+        #Subscrive to the 'frame_read' topic to retrieve the images
         rospy.Subscriber(Detector.TOPIC_SUB, ImagePos, self.callback)
+        #Counter to keep track of ???
         self.count = 0
+        #Dictionary to keep track of the different detected objects in the 3 directions
         self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
 
+    #Utility to check if the counter reached its maximum value
     def _count_end(self):
         return self.count == 3
         
+    #Increse the counter, if it reached the maximum acquire the mutex on scheduler, notify ???? and then realease the mutex
     def sum_count(self):
         self.count += 1
         if self.count == 3:
@@ -36,8 +47,10 @@ class Detector():
             scheduler.notify()
             scheduler.release()
 
+    #Function to perform the speech of Pepper with the identified objects
     def talk(self):
 
+        #Map actual direction of the detection to a string
         def pos2string(pos):
             pos = int(pos)
             if pos == HeadMovement.DESTRA:
@@ -49,9 +62,10 @@ class Detector():
             elif pos == HeadMovement.SINISTRA:
                 #return "A Sinistra"
                 return "On the left"
-
+        #Generate the full string with all the objects detected and identified associated to their position
         #stringa = "Questi sono gli oggetti che ho rilevato:"
         stringa = "I detected these objects: "
+        #Iterate first on the different direction
         for k, v in self.dict_obj.items():
             #stringa = stringa + self.pos2string(k) + " ho visto: "
             stringa = stringa + pos2string(k) + " I saw: "
@@ -59,6 +73,7 @@ class Detector():
                 #stringa = stringa + "Niente. "
                 stringa = stringa + "nothing. "
             else:
+                #If is detected at least one object, generate a string indicating the type of the object and number of its occurrencies
                 for obj, num in v.items():
                     #stringa = stringa + "un " + obj + " " + str(num) + (" volte" if num > 1 else " volta") + ", "
                     stringa = stringa + (str(num) if num>1 else "a") + " " + obj + ("s" if num > 1 else "") + ", "
@@ -67,17 +82,23 @@ class Detector():
         #stringa = stringa + "Finito."
         stringa = stringa + "Finished."
         print(stringa)
+        #Wait for  the animatedSay service
         rospy.wait_for_service('animatedSay')
+        #Call the service with the previusly build string and return the result of the call
         resp1= call(stringa)
         return resp1
 
+    #Clear the dictionary that keep tracks of the detected objects
     def _clear_dict(self):
 
         self.dict_obj[HeadMovement.CENTRO].clear()
         self.dict_obj[HeadMovement.SINISTRA].clear()
         self.dict_obj[HeadMovement.DESTRA].clear()
 
+
+    #Callback called after receiving an update on the topic in which I'm subscribed
     def callback(self, data: ImagePos):
+        #Retrieve postion from the image
         pos = data.pos
         # convert Image into numpy array
         img = ros_numpy.numpify(data.image)
@@ -95,17 +116,20 @@ class Detector():
         detections = {key: value[0, :num_above_thresh].numpy() for key, value in detections.items()}
         detections['detection_classes'] = detections['detection_classes'].astype(np.int64)
 
+        #For every detected object update or initialize the counting of that object in that direction
         for c, s in zip(detections['detection_classes'], detections['detection_scores']):
             if self.dict_obj[pos].get(classmap[c]) is None:
                 self.dict_obj[pos][classmap[c]] = 1
             else:
                 self.dict_obj[pos][classmap[c]] = self.dict_obj[pos][classmap[c]] + 1
         print(pos, self.dict_obj[pos])
+
+        #Update the counter variable "count"
         self.sum_count()
 
     def handleService(self, req):
 
-        
+        #?????????????????????
         if(self.count != 3):
             scheduler.acquire()
             scheduler.wait()
@@ -113,9 +137,12 @@ class Detector():
             
         self.count = 0
         try:
+            #Call the method talk to make Pepper perform the speech
             resp = self.talk()
+            #Clear the dictionary with found and detected objects
             self._clear_dict()
             print(self.dict_obj)
+            #Return the result of 'capture_ended' service
             return capture_endedResponse(resp.result)
         except rospy.ServiceException as e:
             rospy.logwarn("Service call failed: %s" % e)
@@ -125,13 +152,18 @@ class Detector():
 
 
 if __name__ == '__main__':
+    #Wait the service animatedSay
     rospy.wait_for_service('animatedSay')
+    #Call the service Say
     call = rospy.ServiceProxy('animatedSay', Say)
     #call("One moment please. I'm loading the model into my brain")
     print('Loading model...', end='')
+    #Create a Condition object called scheduler to manage inter-thread communication
     scheduler = Condition()
     DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
+    #Load the tf model
     detect_fn = tf.saved_model.load(DET_PATH)
     print('Done!')
+    #Create the Detector object
     det = Detector()
     rospy.spin()
