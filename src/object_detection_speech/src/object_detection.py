@@ -166,4 +166,5 @@ if __name__ == '__main__':
     print('Done!')
     #Create the Detector object
     det = Detector()
+    rospy.loginfo("Model loaded")
     rospy.spin()

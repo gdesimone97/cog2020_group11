@@ -22,7 +22,7 @@ class HeadMovement():
         self.s.joint_names = ['HeadPitch', 'HeadYaw']
         self.s.relative = 0
         self.s.speed = 0.2
-        self.rate = rospy.Rate(0.32)
+        self.rate = rospy.Rate(0.37)
 
 
     def move_head(self, pos, capture=True):
@@ -70,7 +70,6 @@ class HeadMovement():
 if __name__ == "__main__":
     #Create a HeadMovement object and move the head for the first time without capturing any frame
     headMovement = HeadMovement()
-    headMovement.move_head(HeadMovement.CENTRO, False)
     #Call of the "Capture" service 
     rospy.loginfo("Sto aspettando Capture")
     rospy.wait_for_service('Capture')
@@ -78,7 +77,10 @@ if __name__ == "__main__":
     #Wait for the capture to be compelted through waiting the service 'capture_ended'
     rospy.wait_for_service('capture_ended')
     #Perform movement of the head in any direction performing a capture
+    headMovement.rate.sleep()
+    headMovement.move_head(HeadMovement.CENTRO, False)
     headMovement.move_head(HeadMovement.SINISTRA)
+    
     headMovement.move_head(HeadMovement.CENTRO)
     headMovement.move_head(HeadMovement.DESTRA)
     #Align the head back to the center without retrieving any frame

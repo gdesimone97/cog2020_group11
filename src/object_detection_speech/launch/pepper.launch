@@ -1,7 +1,7 @@
 <launch>
 
-    <node name="speech" pkg="object_detection_speech" type="speech.py" />
+    <node name="speech" pkg="object_detection_speech" type="speech.py" output="screen"/>
     <node name="stream_capture" pkg="object_detection_speech" type="stream_capture.py" />
-    <node name="object_detection" pkg="object_detection_speech" type="object_detection.py" />
+    <node name="object_detection" pkg="object_detection_speech" type="object_detection.py" output="screen"/>
 
 </launch>
