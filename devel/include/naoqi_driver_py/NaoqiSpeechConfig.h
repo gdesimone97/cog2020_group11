@@ -1,0 +1,1 @@
+/home/mivia/cog2020_group11/devel/.private/naoqi_driver_py/include/naoqi_driver_py/NaoqiSpeechConfig.h

@@ -1,4 +1,6 @@
 (cl:in-package object_detection_speech-srv)
-(cl:export '(RES-VAL
+(cl:export '(POS-VAL
+          POS
+          RES-VAL
           RES
 ))

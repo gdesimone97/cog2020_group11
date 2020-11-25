@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "object_detection_speech: 0 messages, 3 services")
+message(STATUS "object_detection_speech: 1 messages, 3 services")
 
-set(MSG_I_FLAGS "-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Iobject_detection_speech:/home/mivia/cog2020_group11/src/object_detection_speech/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -27,6 +27,11 @@ add_custom_target(_object_detection_speech_generate_messages_check_deps_${_filen
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "object_detection_speech" "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Capture.srv" ""
 )
 
+get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg" NAME_WE)
+add_custom_target(_object_detection_speech_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "object_detection_speech" "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg" "sensor_msgs/Image:std_msgs/Header"
+)
+
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv" NAME_WE)
 add_custom_target(_object_detection_speech_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "object_detection_speech" "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv" ""
@@ -38,6 +43,12 @@ add_custom_target(_object_detection_speech_generate_messages_check_deps_${_filen
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(object_detection_speech
+  "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/object_detection_speech
+)
 
 ### Generating Services
 _generate_srv_cpp(object_detection_speech
@@ -75,6 +86,8 @@ get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detecti
 add_dependencies(object_detection_speech_generate_messages_cpp _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Capture.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_cpp _object_detection_speech_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg" NAME_WE)
+add_dependencies(object_detection_speech_generate_messages_cpp _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_cpp _object_detection_speech_generate_messages_check_deps_${_filename})
 
@@ -87,6 +100,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_speech_generate_me
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(object_detection_speech
+  "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/object_detection_speech
+)
 
 ### Generating Services
 _generate_srv_eus(object_detection_speech
@@ -124,6 +143,8 @@ get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detecti
 add_dependencies(object_detection_speech_generate_messages_eus _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Capture.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_eus _object_detection_speech_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg" NAME_WE)
+add_dependencies(object_detection_speech_generate_messages_eus _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_eus _object_detection_speech_generate_messages_check_deps_${_filename})
 
@@ -136,6 +157,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_speech_generate_me
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(object_detection_speech
+  "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/object_detection_speech
+)
 
 ### Generating Services
 _generate_srv_lisp(object_detection_speech
@@ -173,6 +200,8 @@ get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detecti
 add_dependencies(object_detection_speech_generate_messages_lisp _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Capture.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_lisp _object_detection_speech_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg" NAME_WE)
+add_dependencies(object_detection_speech_generate_messages_lisp _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_lisp _object_detection_speech_generate_messages_check_deps_${_filename})
 
@@ -185,6 +214,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_speech_generate_me
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(object_detection_speech
+  "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/object_detection_speech
+)
 
 ### Generating Services
 _generate_srv_nodejs(object_detection_speech
@@ -222,6 +257,8 @@ get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detecti
 add_dependencies(object_detection_speech_generate_messages_nodejs _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Capture.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_nodejs _object_detection_speech_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg" NAME_WE)
+add_dependencies(object_detection_speech_generate_messages_nodejs _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_nodejs _object_detection_speech_generate_messages_check_deps_${_filename})
 
@@ -234,6 +271,12 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS object_detection_speech_generate_me
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(object_detection_speech
+  "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/object_detection_speech
+)
 
 ### Generating Services
 _generate_srv_py(object_detection_speech
@@ -271,6 +314,8 @@ get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detecti
 add_dependencies(object_detection_speech_generate_messages_py _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Capture.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_py _object_detection_speech_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/msg/ImagePos.msg" NAME_WE)
+add_dependencies(object_detection_speech_generate_messages_py _object_detection_speech_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/mivia/cog2020_group11/src/object_detection_speech/srv/Say.srv" NAME_WE)
 add_dependencies(object_detection_speech_generate_messages_py _object_detection_speech_generate_messages_check_deps_${_filename})
 
@@ -293,6 +338,9 @@ endif()
 if(TARGET std_msgs_generate_messages_cpp)
   add_dependencies(object_detection_speech_generate_messages_cpp std_msgs_generate_messages_cpp)
 endif()
+if(TARGET sensor_msgs_generate_messages_cpp)
+  add_dependencies(object_detection_speech_generate_messages_cpp sensor_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/object_detection_speech)
   # install generated code
@@ -303,6 +351,9 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/ob
 endif()
 if(TARGET std_msgs_generate_messages_eus)
   add_dependencies(object_detection_speech_generate_messages_eus std_msgs_generate_messages_eus)
+endif()
+if(TARGET sensor_msgs_generate_messages_eus)
+  add_dependencies(object_detection_speech_generate_messages_eus sensor_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/object_detection_speech)
@@ -315,6 +366,9 @@ endif()
 if(TARGET std_msgs_generate_messages_lisp)
   add_dependencies(object_detection_speech_generate_messages_lisp std_msgs_generate_messages_lisp)
 endif()
+if(TARGET sensor_msgs_generate_messages_lisp)
+  add_dependencies(object_detection_speech_generate_messages_lisp sensor_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/object_detection_speech)
   # install generated code
@@ -325,6 +379,9 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
 endif()
 if(TARGET std_msgs_generate_messages_nodejs)
   add_dependencies(object_detection_speech_generate_messages_nodejs std_msgs_generate_messages_nodejs)
+endif()
+if(TARGET sensor_msgs_generate_messages_nodejs)
+  add_dependencies(object_detection_speech_generate_messages_nodejs sensor_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/object_detection_speech)
@@ -337,4 +394,7 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/obje
 endif()
 if(TARGET std_msgs_generate_messages_py)
   add_dependencies(object_detection_speech_generate_messages_py std_msgs_generate_messages_py)
+endif()
+if(TARGET sensor_msgs_generate_messages_py)
+  add_dependencies(object_detection_speech_generate_messages_py sensor_msgs_generate_messages_py)
 endif()

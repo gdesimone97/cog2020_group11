@@ -1,0 +1,8 @@
+prefix=/home/mivia/cog2020_group11/devel/.private/pepper_sensors_py
+
+Name: pepper_sensors_py
+Description: Description of pepper_sensors_py
+Version: 0.1.10
+Cflags: 
+Libs: -L/home/mivia/cog2020_group11/devel/.private/pepper_sensors_py/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mivia/cog2020_group11/devel/.private/pepper_bringup
+
+Name: pepper_bringup
+Description: Description of pepper_bringup
+Version: 0.1.10
+Cflags: 
+Libs: -L/home/mivia/cog2020_group11/devel/.private/pepper_bringup/lib 
+Requires: 

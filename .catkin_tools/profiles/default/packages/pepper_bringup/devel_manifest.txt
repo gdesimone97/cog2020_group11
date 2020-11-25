@@ -1,0 +1,4 @@
+pepper_robot/pepper_bringup
+/home/mivia/cog2020_group11/devel/.private/pepper_bringup/lib/pkgconfig/pepper_bringup.pc /home/mivia/cog2020_group11/devel/lib/pkgconfig/pepper_bringup.pc
+/home/mivia/cog2020_group11/devel/.private/pepper_bringup/share/pepper_bringup/cmake/pepper_bringupConfig-version.cmake /home/mivia/cog2020_group11/devel/share/pepper_bringup/cmake/pepper_bringupConfig-version.cmake
+/home/mivia/cog2020_group11/devel/.private/pepper_bringup/share/pepper_bringup/cmake/pepper_bringupConfig.cmake /home/mivia/cog2020_group11/devel/share/pepper_bringup/cmake/pepper_bringupConfig.cmake

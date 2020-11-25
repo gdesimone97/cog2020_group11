@@ -1,0 +1,7 @@
+<launch>
+    <arg name="ip" default="10.0.1.230" />
+    <node name="speech" pkg="object_detection_speech" type="speech.py" output="screen" args="--ip $(arg ip)"/>
+    <node name="stream_capture" pkg="object_detection_speech" type="stream_capture.py" />
+    <node name="object_detection" pkg="object_detection_speech" type="object_detection.py" output="screen"/>
+
+</launch>

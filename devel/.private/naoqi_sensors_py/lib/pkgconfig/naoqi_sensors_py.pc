@@ -1,0 +1,8 @@
+prefix=/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py
+
+Name: naoqi_sensors_py
+Description: Description of naoqi_sensors_py
+Version: 0.5.5
+Cflags: -I/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/include
+Libs: -L/home/mivia/cog2020_group11/devel/.private/naoqi_sensors_py/lib 
+Requires: 

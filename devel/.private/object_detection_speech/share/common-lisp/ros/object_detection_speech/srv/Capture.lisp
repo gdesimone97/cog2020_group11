@@ -7,7 +7,11 @@
 ;//! \htmlinclude Capture-request.msg.html
 
 (cl:defclass <Capture-request> (roslisp-msg-protocol:ros-message)
-  ()
+  ((pos
+    :reader pos
+    :initarg :pos
+    :type cl:fixnum
+    :initform 0))
 )
 
 (cl:defclass Capture-request (<Capture-request>)
@@ -17,11 +21,22 @@
   (cl:declare (cl:ignorable args))
   (cl:unless (cl:typep m 'Capture-request)
     (roslisp-msg-protocol:msg-deprecation-warning "using old message class name object_detection_speech-srv:<Capture-request> is deprecated: use object_detection_speech-srv:Capture-request instead.")))
+
+(cl:ensure-generic-function 'pos-val :lambda-list '(m))
+(cl:defmethod pos-val ((m <Capture-request>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader object_detection_speech-srv:pos-val is deprecated.  Use object_detection_speech-srv:pos instead.")
+  (pos m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <Capture-request>) ostream)
   "Serializes a message object of type '<Capture-request>"
+  (cl:let* ((signed (cl:slot-value msg 'pos)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 256) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    )
 )
 (cl:defmethod roslisp-msg-protocol:deserialize ((msg <Capture-request>) istream)
   "Deserializes a message object of type '<Capture-request>"
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'pos) (cl:if (cl:< unsigned 128) unsigned (cl:- unsigned 256))))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<Capture-request>)))
@@ -32,22 +47,24 @@
   "object_detection_speech/CaptureRequest")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Capture-request>)))
   "Returns md5sum for a message object of type '<Capture-request>"
-  "e27848a10f8e7e4030443887dfea101b")
+  "866d0f24d3ab72d13af3825e88039241")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Capture-request)))
   "Returns md5sum for a message object of type 'Capture-request"
-  "e27848a10f8e7e4030443887dfea101b")
+  "866d0f24d3ab72d13af3825e88039241")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Capture-request>)))
   "Returns full string definition for message of type '<Capture-request>"
-  (cl:format cl:nil "~%~%"))
+  (cl:format cl:nil "int8 pos~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'Capture-request)))
   "Returns full string definition for message of type 'Capture-request"
-  (cl:format cl:nil "~%~%"))
+  (cl:format cl:nil "int8 pos~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <Capture-request>))
   (cl:+ 0
+     1
 ))
 (cl:defmethod roslisp-msg-protocol:ros-message-to-list ((msg <Capture-request>))
   "Converts a ROS message object to a list"
   (cl:list 'Capture-request
+    (cl:cons ':pos (pos msg))
 ))
 ;//! \htmlinclude Capture-response.msg.html
 
@@ -88,10 +105,10 @@
   "object_detection_speech/CaptureResponse")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<Capture-response>)))
   "Returns md5sum for a message object of type '<Capture-response>"
-  "e27848a10f8e7e4030443887dfea101b")
+  "866d0f24d3ab72d13af3825e88039241")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'Capture-response)))
   "Returns md5sum for a message object of type 'Capture-response"
-  "e27848a10f8e7e4030443887dfea101b")
+  "866d0f24d3ab72d13af3825e88039241")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<Capture-response>)))
   "Returns full string definition for message of type '<Capture-response>"
   (cl:format cl:nil "bool res~%~%~%"))

@@ -3,6 +3,8 @@ Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/object_
 Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/object_detection_speech/srv/_Say.py
 Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/object_detection_speech/srv/__init__.py
 Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/object_detection_speech/srv/_Capture.py
+Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/object_detection_speech/msg/_ImagePos.py
+Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/object_detection_speech/msg/__init__.py
 Symlinking /home/mivia/cog2020_group11/devel/lib/pkgconfig/object_detection_speech.pc
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/CaptureRequest.h
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/capture_ended.h
@@ -10,6 +12,7 @@ Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/cap
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/SayRequest.h
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/capture_endedResponse.h
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/Capture.h
+Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/ImagePos.h
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/CaptureResponse.h
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/Say.h
 Symlinking /home/mivia/cog2020_group11/devel/include/object_detection_speech/SayResponse.h
@@ -18,6 +21,8 @@ Symlinking /home/mivia/cog2020_group11/devel/share/gennodejs/ros/object_detectio
 Symlinking /home/mivia/cog2020_group11/devel/share/gennodejs/ros/object_detection_speech/srv/_index.js
 Symlinking /home/mivia/cog2020_group11/devel/share/gennodejs/ros/object_detection_speech/srv/Capture.js
 Symlinking /home/mivia/cog2020_group11/devel/share/gennodejs/ros/object_detection_speech/srv/Say.js
+Symlinking /home/mivia/cog2020_group11/devel/share/gennodejs/ros/object_detection_speech/msg/_index.js
+Symlinking /home/mivia/cog2020_group11/devel/share/gennodejs/ros/object_detection_speech/msg/ImagePos.js
 Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/srv/_package_capture_ended.lisp
 Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/srv/Say.lisp
 Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/srv/capture_ended.lisp
@@ -26,6 +31,10 @@ Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detect
 Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/srv/object_detection_speech-srv.asd
 Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/srv/Capture.lisp
 Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/srv/_package.lisp
+Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/msg/_package_ImagePos.lisp
+Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/msg/object_detection_speech-msg.asd
+Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/msg/ImagePos.lisp
+Symlinking /home/mivia/cog2020_group11/devel/share/common-lisp/ros/object_detection_speech/msg/_package.lisp
 Symlinking /home/mivia/cog2020_group11/devel/share/object_detection_speech/cmake/object_detection_speech-msg-extras.cmake
 Symlinking /home/mivia/cog2020_group11/devel/share/object_detection_speech/cmake/object_detection_speechConfig-version.cmake
 Symlinking /home/mivia/cog2020_group11/devel/share/object_detection_speech/cmake/object_detection_speech-msg-paths.cmake
@@ -34,3 +43,4 @@ Symlinking /home/mivia/cog2020_group11/devel/share/roseus/ros/object_detection_s
 Symlinking /home/mivia/cog2020_group11/devel/share/roseus/ros/object_detection_speech/srv/Say.l
 Symlinking /home/mivia/cog2020_group11/devel/share/roseus/ros/object_detection_speech/srv/capture_ended.l
 Symlinking /home/mivia/cog2020_group11/devel/share/roseus/ros/object_detection_speech/srv/Capture.l
+Symlinking /home/mivia/cog2020_group11/devel/share/roseus/ros/object_detection_speech/msg/ImagePos.l

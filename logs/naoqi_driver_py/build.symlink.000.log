@@ -1,0 +1,12 @@
+Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_driver/__init__.py
+Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_driver_py/__init__.py
+Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_driver_py/cfg/NaoqiSpeechConfig.py
+Symlinking /home/mivia/cog2020_group11/devel/lib/python2.7/dist-packages/naoqi_driver_py/cfg/__init__.py
+Symlinking /home/mivia/cog2020_group11/devel/lib/pkgconfig/naoqi_driver_py.pc
+Symlinking /home/mivia/cog2020_group11/devel/include/naoqi_driver_py/NaoqiSpeechConfig.h
+Symlinking /home/mivia/cog2020_group11/devel/share/naoqi_driver_py/docs/NaoqiSpeechConfig.wikidoc
+Symlinking /home/mivia/cog2020_group11/devel/share/naoqi_driver_py/docs/NaoqiSpeechConfig.dox
+Symlinking /home/mivia/cog2020_group11/devel/share/naoqi_driver_py/docs/NaoqiSpeechConfig-usage.dox
+Symlinking /home/mivia/cog2020_group11/devel/share/naoqi_driver_py/cmake/naoqi_driver_pyConfig.cmake
+Symlinking /home/mivia/cog2020_group11/devel/share/naoqi_driver_py/cmake/naoqi_driver_pyConfig-version.cmake
+Symlinking /home/mivia/cog2020_group11/devel/share/naoqi_driver_py/cmake/naoqi_driver-extras.cmake

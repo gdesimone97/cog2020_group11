@@ -38,7 +38,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m Using Python nosetests: /usr/bin/nosetests-2.7
 [36m--[0m catkin 0.7.14
 [36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
-[36m--[0m object_detection_speech: 0 messages, 3 services
+[36m--[0m object_detection_speech: 1 messages, 3 services
 [36m--[0m Configuring done
 [36m--[0m Generating done
 [36m--[0m Build files have been written to: /home/mivia/cog2020_group11/build/object_detection_speech
