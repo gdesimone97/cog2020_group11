@@ -136,7 +136,7 @@ class NaoqiNode(Thread):
 
         proxy = None
         try:
-            proxy = ALProxy(name,"10.0.1.230",self.pport)
+            proxy = ALProxy(name,self.pip,self.pport)
             
         except RuntimeError,e:
             if warn:

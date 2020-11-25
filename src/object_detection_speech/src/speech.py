@@ -15,6 +15,7 @@ class AnimatedSay(NaoqiNode):
     def __init__(self):
         #Create a Naoqui node called 'animated_speech' and connect it
         NaoqiNode.__init__(self, 'animated_speech')
+        self.pip = AnimatedSay.IP
         self.connectNaoQi()
         pass
 
