@@ -28,7 +28,7 @@ class Detector():
         rospy.Service("capture_ended", capture_ended, self.handleService)
         #Subscrive to the 'frame_read' topic to retrieve the images
         rospy.Subscriber(Detector.TOPIC_SUB, ImagePos, self.callback)
-        #Counter to keep track of ???
+        #Counter to keep track of executed movements of the head after end_capture service response, the head should move 3 times
         self.count = 0
         #Dictionary to keep track of the different detected objects in the 3 directions
         self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
@@ -37,7 +37,7 @@ class Detector():
     def _count_end(self):
         return self.count == 3
         
-    #Increse the counter, if it reached the maximum acquire the mutex on scheduler, notify ???? and then realease the mutex
+    #Increse the counter, if it reached the maximum acquire the scheduler variable, then notify who's waiting on that and release the variable
     def sum_count(self):
         self.count += 1
         if self.count == 3:
@@ -126,7 +126,7 @@ class Detector():
 
     def handleService(self, req):
 
-        #?????????????????????
+        #First case, Pepper didn't do all 3 movements, so wait to be notified after every detection
         if(self.count != 3):
             scheduler.acquire()
             scheduler.wait()
