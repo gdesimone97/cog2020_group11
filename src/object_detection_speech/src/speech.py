@@ -2,7 +2,8 @@
 import rospy
 from naoqi_driver.naoqi_node import NaoqiNode
 from object_detection_speech.srv import Say, SayResponse
-import json
+import sys
+from argparse import ArgumentParser
 
 #This class bridges between the obj_detected channel and the actual performing of the speech 
 class AnimatedSay(NaoqiNode):
@@ -15,7 +16,11 @@ class AnimatedSay(NaoqiNode):
     def __init__(self):
         #Create a Naoqui node called 'animated_speech' and connect it
         NaoqiNode.__init__(self, 'animated_speech')
-        self.pip = AnimatedSay.IP
+        parser = ArgumentParser()
+        parser.add_argument("--ip", dest="ip", default="10.0.1.230")
+        args, unknown = parser.parse_known_args(args=rospy.myargv(argv=sys.argv)[1:])
+        ip = args.ip
+        self.pip = ip
         self.connectNaoQi()
         pass
 
