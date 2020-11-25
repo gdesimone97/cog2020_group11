@@ -6,9 +6,7 @@ assert (int(tf.__version__.split('.')[0]) >= 2)
 import ros_numpy
 import numpy as np
 from classmap import category_map as classmap
-from sensor_msgs.msg import Image
 from object_detection_speech.srv import capture_ended, capture_endedResponse, Say
-import json
 import os
 from object_detection_speech.msg import ImagePos
 from head_movement import HeadMovement
@@ -81,7 +79,7 @@ class Detector():
 
         #stringa = stringa + "Finito."
         stringa = stringa + "Finished."
-        print(stringa)
+        #print(stringa)
         #Wait for  the animatedSay service
         rospy.wait_for_service('animatedSay')
         #Call the service with the previusly build string and return the result of the call
@@ -104,7 +102,6 @@ class Detector():
         img = ros_numpy.numpify(data.image)
 
         # image preprocessing
-        img_copy = img.copy()
         img = img[:, :, ::-1]
         input_tensor = tf.convert_to_tensor(img)
         input_tensor = input_tensor[tf.newaxis, ...]
@@ -122,7 +119,7 @@ class Detector():
                 self.dict_obj[pos][classmap[c]] = 1
             else:
                 self.dict_obj[pos][classmap[c]] = self.dict_obj[pos][classmap[c]] + 1
-        print(pos, self.dict_obj[pos])
+        rospy.loginfo(pos, self.dict_obj[pos])
 
         #Update the counter variable "count"
         self.sum_count()
