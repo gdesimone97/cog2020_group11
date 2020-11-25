@@ -42,8 +42,8 @@ Moreover, on the console, the same string will be printed out.
 
 
 ### Credits:
->Group 11;
->De Simone Giuseppe;
->Giaquinto Gennaro;
->Marino Christian;
->Serritiello Simone.
+>Group 11 <br>
+>De Simone Giuseppe <br>
+>Giaquinto Gennaro <br>
+>Marino Christian <br>
+>Serritiello Simone
