@@ -3,13 +3,12 @@
 
 ### How to run the project:
 
->Wake up Pepper with
+>1. Wake up Pepper with
 ```sh
 roslaunch pepper_bringup pepper_full.py nao_ip:=10.0.1.???
 ```
-***
 
->Run the launch file **pepper.launch** in the package **object_detection_speech**
+>2. Run the launch file **pepper.launch** in the package **object_detection_speech**
 ```sh
 roslaunch object_detection_speech pepper.launch ip:=10.0.1.???
 ```
@@ -19,11 +18,11 @@ This command will run three nodes:
 - *animated_speech* to let pepper talk;
 - *object_detection* for the object detection task on every images it receives.
 The latter will load the model, so please wait a bit (first time only)
-***
 
->Run the **head_movement** node
+
+>3. Run the **head_movement** node
 ```sh
-rosrun object_detection_speech head_movement
+rosrun object_detection_speech head_movement.py
 ```
 This node wasn't included into the launch file because it manages the whole cycle of detections:
 after the cycle, this node will stop its execution, so if you want to re-start the detections, 
