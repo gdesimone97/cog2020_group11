@@ -119,7 +119,7 @@ class Detector():
                 self.dict_obj[pos][classmap[c]] = 1
             else:
                 self.dict_obj[pos][classmap[c]] = self.dict_obj[pos][classmap[c]] + 1
-        rospy.loginfo(pos, self.dict_obj[pos])
+        print(pos, self.dict_obj[pos])
 
         #Update the counter variable "count"
         self.sum_count()
@@ -138,13 +138,11 @@ class Detector():
             resp = self.talk()
             #Clear the dictionary with found and detected objects
             self._clear_dict()
-            print(self.dict_obj)
             #Return the result of 'capture_ended' service
             return capture_endedResponse(resp.result)
         except rospy.ServiceException as e:
             rospy.logwarn("Service call failed: %s" % e)
             self._clear_dict()
-            print(self.dict_obj)
             return capture_endedResponse(False)
 
 
