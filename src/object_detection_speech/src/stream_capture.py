@@ -6,7 +6,16 @@ from object_detection_speech.srv import Capture, CaptureResponse
 import time
 from object_detection_speech.msg import ImagePos
 
+'''
+This node is responsible of capture images.
+Its service interface exposes the method: "Capture", it reads the data stream coming from Pepper front camera
+and publishes the image on frame_read topic.
+'''
+
 class StreamCapture():
+    '''
+    Builder for the class
+    '''
     def __init__(self):
         #Initialize a nod called frame_reader
         rospy.init_node("frame_reader")
@@ -22,7 +31,12 @@ class StreamCapture():
 
 
 
-
+    '''
+    This callback is called every time the camera acquires an image by camera topic.
+    It creates a message containing the position of the head and the acquired image.
+    
+    @param: data Data stream of the image.
+    '''
     def frame_reader(self, data):
         #Activate only if the flag is set to True so can performs frame reading
         if self.flag:
@@ -35,7 +49,12 @@ class StreamCapture():
             self.flag = False
             rospy.loginfo("Publishing image...")
 
-    #Callback of the Capture service
+    '''
+    This callback is called every time the node receives a client request.
+    It manages the image capture.
+
+    @param: req Client request containing the position of the head
+    '''
     def callback(self, req):
         #Upon receiving a request, identify the postion
         self.pos = req.pos
