@@ -12,7 +12,10 @@ from object_detection_speech.msg import ImagePos
 from head_movement import HeadMovement
 from threading import Condition
 
-
+'''
+This class performs the detection task.
+It loads the detector net and obtains the objects list from an image.
+'''
 class Detector():
     #This class performs a subscription to the topic TOPIC_SUB to retrieve the captured image, while publish on the topic 
     #TOPIC_PUB to publish/return the result of the image detection on the previously captured image
@@ -20,7 +23,9 @@ class Detector():
     TOPIC_PUB = "obj_detected"
 
 
-
+    '''
+    Builder for the class
+    '''
     def __init__(self):
         #Initialize the node 'object_detection'
         rospy.init_node('object_detection')
@@ -33,11 +38,15 @@ class Detector():
         #Dictionary to keep track of the different detected objects in the 3 directions
         self.dict_obj = {HeadMovement.CENTRO: {}, HeadMovement.SINISTRA: {}, HeadMovement.DESTRA: {}}
 
-    #Utility to check if the counter reached its maximum value
+    '''
+    Utility to check if the counter reached its maximum value
+    '''
     def _count_end(self):
         return self.count == 3
         
-    #Increse the counter, if it reached the maximum acquire the scheduler variable, then notify who's waiting on that and release the variable
+    '''
+    Increse the counter, if it reached the maximum acquire the scheduler variable, then notify who's waiting on that and release the variable
+    '''
     def sum_count(self):
         self.count += 1
         if self.count == 3:
@@ -45,10 +54,16 @@ class Detector():
             scheduler.notify()
             scheduler.release()
 
-    #Function to perform the speech of Pepper with the identified objects
+    '''
+    Method to perform the speech of Pepper with the identified objects
+    '''
     def talk(self):
 
-        #Map actual direction of the detection to a string
+        '''
+        Map actual direction of the detection to a string
+
+        @param: pos Position of the head as integer
+        '''
         def pos2string(pos):
             pos = int(pos)
             if pos == HeadMovement.DESTRA:
@@ -86,7 +101,9 @@ class Detector():
         resp1= call(stringa)
         return resp1
 
-    #Clear the dictionary that keep tracks of the detected objects
+    '''
+    Clear the dictionary that keep tracks of the detected objects
+    '''
     def _clear_dict(self):
 
         self.dict_obj[HeadMovement.CENTRO].clear()
@@ -94,7 +111,11 @@ class Detector():
         self.dict_obj[HeadMovement.DESTRA].clear()
 
 
-    #Callback called after receiving an update on the topic in which I'm subscribed
+    '''
+    Callback called after receiving an update on the topic in which I'm subscribed
+    
+    @param: data Message containing head position as integer and data stream of image.
+    '''
     def callback(self, data: ImagePos):
         #Retrieve postion from the image
         pos = data.pos
@@ -124,6 +145,11 @@ class Detector():
         #Update the counter variable "count"
         self.sum_count()
 
+    '''
+    Callback is called when the dictionary is ready to be sent.
+    
+    @param: req Client request 
+    '''
     def handleService(self, req):
 
         #First case, Pepper didn't do all 3 movements, so wait to be notified after every detection

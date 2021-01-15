@@ -3,6 +3,11 @@ import rospy
 from naoqi_bridge_msgs.msg import JointAnglesWithSpeed
 from object_detection_speech.srv import Capture, capture_ended
 
+'''
+This node is responsible of the movement of the head.
+It publishes the rotation angle of the head relative to the pitch and yaw angles, through a publisher/subscriber mechanism.
+Moreover this node manages the moment of images capture through "Capture" service.
+'''
 class HeadMovement():
 
     #Mapping between directions in which the head can move and numerical value
@@ -10,7 +15,9 @@ class HeadMovement():
     CENTRO = 1
     DESTRA = 0
 
-    #Builder for the class
+    '''
+    Builder for the class
+    '''
     def __init__(self):
 
         #Initializaiton of ROS node with name "head_movement"
@@ -24,7 +31,11 @@ class HeadMovement():
         self.s.speed = 0.2
         self.rate = rospy.Rate(0.37)
 
-
+    '''
+    This method handles the head movement.
+    @param: pos The desired orientation of the head as integer.
+    @param: capture If true, sends the capture request.
+    '''
     def move_head(self, pos, capture=True):
         #Set the joint angles for the actual movement to perform
         self.s.joint_angles = [0.2, pos-1]
@@ -33,7 +44,7 @@ class HeadMovement():
         self.p.publish(self.s)
         self.rate.sleep()
 
-        #Pepper is not busy capturing image of the enviroment, return True
+        #If capture is False, no request will be sent
         if not capture:
             return True
 
@@ -45,8 +56,9 @@ class HeadMovement():
         #Pepper did the capture of the frame and everything went succesful
         return True
 
-
-    #Call the capture_ended service and in case of succesful operation, return the reply retrieved by response of the service
+    '''
+    Call the capture_ended service and in case of succesful operation, return the reply retrieved by response of the service
+    '''
     def end_capture(self):
         try:
             call = rospy.ServiceProxy('capture_ended', capture_ended)
@@ -56,7 +68,10 @@ class HeadMovement():
             return False
         return resp.result
 
-    #Call the Capture service to retrieve a frame of the environment, if everything goes well return True, otherwise False
+    '''
+    Call the Capture service to retrieve a frame of the environment, if everything goes well return True, otherwise False
+    @param: pos head position as integer
+    '''
     def capture_images(self, pos):
         try:
             call = rospy.ServiceProxy('Capture', Capture)

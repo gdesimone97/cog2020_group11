@@ -5,7 +5,9 @@ from object_detection_speech.srv import Say, SayResponse
 import sys
 from argparse import ArgumentParser
 
-#This class bridges between the obj_detected channel and the actual performing of the speech 
+'''
+This class bridges between the obj_detected channel and the actual performing of the speech 
+'''
 class AnimatedSay(NaoqiNode):
     #Topic where retrieve the detected objects
     TOPIC_SUB = "obj_detected"
@@ -13,6 +15,9 @@ class AnimatedSay(NaoqiNode):
     IP = "10.0.1.230"
     PORT = "9559"
 
+    '''
+    Builder of the class
+    '''
     def __init__(self):
         #Create a Naoqui node called 'animated_speech' and connect it
         NaoqiNode.__init__(self, 'animated_speech')
@@ -24,16 +29,21 @@ class AnimatedSay(NaoqiNode):
         self.connectNaoQi()
         pass
 
-    #Say is called when the 'animatedSay' service is requested and make Pepper performs the speech 
+    '''
+    Say is called when the 'animatedSay' service is requested and make Pepper performs the speech 
+    
+    @param: data Message to say
+    '''
     def say(self, data):
         rospy.loginfo("START: %s" %data.message)
         self.speech.say(str(data.message))
         #Return the outcome of the requested speech operation
         return SayResponse(True)
 
-    
+    '''
+    Acquire the proxy where the speech requests will be forwarded
+    '''
     def connectNaoQi(self):
-        #Acquire the proxy where the speech requests will be forwarded
         self.speech = self.get_proxy("ALAnimatedSpeech")
         #self.speech.setLanguage("English")
         #Create the service 'animatedSay' with callback say
