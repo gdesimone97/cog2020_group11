@@ -196,7 +196,7 @@ if __name__ == '__main__':
     print('Done!')
     #Create the Detector object
     
-    img = np.full((512,512,3),0)
+    img = np.full((512, 512, 3), 0, dtype=np.uint8)
     img = img[:, :, ::-1]
     input_tensor = tf.convert_to_tensor(img)
     input_tensor = input_tensor[tf.newaxis, ...]
