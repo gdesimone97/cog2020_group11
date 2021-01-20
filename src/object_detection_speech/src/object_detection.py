@@ -177,6 +177,14 @@ class Detector():
             return capture_endedResponse(False)
 
 
+def init_model():
+
+    img = np.full((512, 512, 3), 0, dtype=np.uint8)
+    img = img[:, :, ::-1]
+    input_tensor = tf.convert_to_tensor(img)
+    input_tensor = input_tensor[tf.newaxis, ...]
+    detect_fn(input_tensor)
+    
 if __name__ == '__main__':
     #Wait the service animatedSay
     rospy.wait_for_service('animatedSay')
@@ -196,11 +204,7 @@ if __name__ == '__main__':
     print('Done!')
     #Create the Detector object
     
-    img = np.full((512, 512, 3), 0, dtype=np.uint8)
-    img = img[:, :, ::-1]
-    input_tensor = tf.convert_to_tensor(img)
-    input_tensor = input_tensor[tf.newaxis, ...]
-    detect_fn(input_tensor)
+    init_model()
     
     det = Detector()
     print("Model loaded in", elapse, "seconds")
