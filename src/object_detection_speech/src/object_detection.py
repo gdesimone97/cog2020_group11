@@ -184,7 +184,7 @@ def init_model():
     input_tensor = tf.convert_to_tensor(img)
     input_tensor = input_tensor[tf.newaxis, ...]
     detect_fn(input_tensor)
-    
+
 if __name__ == '__main__':
     #Wait the service animatedSay
     rospy.wait_for_service('animatedSay')
@@ -194,7 +194,7 @@ if __name__ == '__main__':
     print('Loading model...', end='')
     #Create a Condition object called scheduler to manage inter-thread communication
     scheduler = Condition()
-    MODEL_NAME = "centernet_resnet50_v1_fpn_512x512_coco17_tpu-8" #Modify model name here
+    MODEL_NAME = "centernet_resnet101_v1_fpn_512x512_coco17_tpu-8" #Modify model name here
     DET_PATH = os.path.dirname(__file__) + '/../models/' + MODEL_NAME
     #Load the tf model
     start = time.time()
