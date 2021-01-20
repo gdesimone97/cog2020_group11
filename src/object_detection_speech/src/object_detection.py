@@ -132,8 +132,8 @@ class Detector():
         start = time.time()
         detections = detect_fn(input_tensor)
         end = time.time()
-        elapse = round(end - start, 2)
-        rospy.loginfo("Detection completed in", elapse, "seconds")
+        elapse = str(round(end - start, 2))
+        print("Detection completed in", elapse, "seconds")
         num_above_thresh = np.sum(detections['detection_scores'] > 0.5)
         detections.pop('num_detections')
         detections = {key: value[0, :num_above_thresh].numpy() for key, value in detections.items()}
@@ -186,15 +186,15 @@ if __name__ == '__main__':
     print('Loading model...', end='')
     #Create a Condition object called scheduler to manage inter-thread communication
     scheduler = Condition()
-    MODEL_NAME = "efficientdet_d1_coco17_tpu-32" #Modify model here
+    MODEL_NAME = "efficientdet_d2_coco17_tpu-32" #Modify model name here
     DET_PATH = os.path.dirname(__file__) + '/../models/' + MODEL_NAME
     #Load the tf model
     start = time.time()
     detect_fn = tf.saved_model.load(DET_PATH)
     end = time.time()
-    elapse = round(end - start, 2)
+    elapse = str(round(end - start, 2))
     print('Done!')
     #Create the Detector object
     det = Detector()
-    rospy.loginfo("Model loaded in", elapse, "seconds")
+    print("Model loaded in", elapse, "seconds")
     rospy.spin()
