@@ -5,7 +5,7 @@
 
 >1. Wake up Pepper with
 ```sh
-roslaunch pepper_bringup pepper_full.py nao_ip:=10.0.1.???
+roslaunch pepper_bringup pepper_full_py.launch nao_ip:=10.0.1.???
 ```
 
 >2. Run the launch file **pepper.launch** in the package **object_detection_speech**

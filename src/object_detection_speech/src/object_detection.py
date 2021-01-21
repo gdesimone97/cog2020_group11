@@ -11,6 +11,7 @@ import os
 from object_detection_speech.msg import ImagePos
 from head_movement import HeadMovement
 from threading import Condition
+import time
 
 '''
 This class performs the detection task.
@@ -128,7 +129,11 @@ class Detector():
         input_tensor = input_tensor[tf.newaxis, ...]
 
         # detect classes into the image
+        start = time.time()
         detections = detect_fn(input_tensor)
+        end = time.time()
+        elapse = str(round(end - start, 2))
+        print("Detection completed in", elapse, "seconds")
         num_above_thresh = np.sum(detections['detection_scores'] > 0.5)
         detections.pop('num_detections')
         detections = {key: value[0, :num_above_thresh].numpy() for key, value in detections.items()}
@@ -172,6 +177,14 @@ class Detector():
             return capture_endedResponse(False)
 
 
+def init_model():
+
+    img = np.full((512, 512, 3), 0, dtype=np.uint8)
+    img = img[:, :, ::-1]
+    input_tensor = tf.convert_to_tensor(img)
+    input_tensor = input_tensor[tf.newaxis, ...]
+    detect_fn(input_tensor)
+
 if __name__ == '__main__':
     #Wait the service animatedSay
     rospy.wait_for_service('animatedSay')
@@ -181,11 +194,18 @@ if __name__ == '__main__':
     print('Loading model...', end='')
     #Create a Condition object called scheduler to manage inter-thread communication
     scheduler = Condition()
-    DET_PATH = os.path.dirname(__file__) + '/../efficientdet_d1_coco17_tpu-32'
+    MODEL_NAME = "efficientdet_d3_coco17_tpu-32" #Modify model name here
+    DET_PATH = os.path.dirname(__file__) + '/../models/' + MODEL_NAME
     #Load the tf model
+    start = time.time()
     detect_fn = tf.saved_model.load(DET_PATH)
+    end = time.time()
+    elapse = str(round(end - start, 2))
     print('Done!')
+    print("Model loaded in", elapse, "seconds")
     #Create the Detector object
+    
+    init_model()
+    
     det = Detector()
-    rospy.loginfo("Model loaded")
     rospy.spin()
