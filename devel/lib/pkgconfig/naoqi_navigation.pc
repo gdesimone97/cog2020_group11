@@ -1,1 +1,0 @@
-/home/mivia/cog2020_group11/devel/.private/naoqi_navigation/lib/pkgconfig/naoqi_navigation.pc

@@ -1,1 +1,0 @@
-/home/mivia/cog2020_group11/devel/.private/pepper_sensors_py/share/pepper_sensors_py/cmake/pepper_sensors_pyConfig-version.cmake
