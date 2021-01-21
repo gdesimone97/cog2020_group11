@@ -194,7 +194,7 @@ if __name__ == '__main__':
     print('Loading model...', end='')
     #Create a Condition object called scheduler to manage inter-thread communication
     scheduler = Condition()
-    MODEL_NAME = "centernet_resnet101_v1_fpn_512x512_coco17_tpu-8" #Modify model name here
+    MODEL_NAME = "efficientdet_d3_coco17_tpu-32" #Modify model name here
     DET_PATH = os.path.dirname(__file__) + '/../models/' + MODEL_NAME
     #Load the tf model
     start = time.time()
@@ -202,10 +202,10 @@ if __name__ == '__main__':
     end = time.time()
     elapse = str(round(end - start, 2))
     print('Done!')
+    print("Model loaded in", elapse, "seconds")
     #Create the Detector object
     
     init_model()
     
     det = Detector()
-    print("Model loaded in", elapse, "seconds")
     rospy.spin()
